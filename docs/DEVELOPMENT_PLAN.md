@@ -147,7 +147,7 @@ apps/api/app
 - 단순 bounding box 기반 충돌
 - physics dependency는 필요성이 확인될 때만 검토
 
-### Commit 11 — Interaction system
+### Commit 11 — Interaction system · 완료
 
 - 공통 Interaction Target
 - proximity와 nearest target

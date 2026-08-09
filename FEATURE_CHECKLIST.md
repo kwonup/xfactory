@@ -84,11 +84,11 @@
 |---|---|---|---:|---|---|
 | ZI-01 | Zone 데이터 모델 | 6개 Zone 타입과 bounds 정의 | 09 | DONE | Six non-overlapping bounds, unit tests |
 | ZI-02 | 현재 Zone 감지 | Player 위치에 따라 current zone 변경 | 09 | DONE | Zustand store, browser zone transition |
-| ZI-03 | Interaction Target | 공통 target 데이터 구조 사용 | 11 | TODO | — |
-| ZI-04 | 근접 판정 | radius 안에서만 활성화 | 11 | TODO | — |
-| ZI-05 | 최근접 대상 | 겹칠 때 가장 가까운 하나 선택 | 11 | TODO | — |
-| ZI-06 | `E` Prompt | 대상별 DOM 안내 표시 | 11 | TODO | — |
-| ZI-07 | `ESC` 닫기 | Modal과 Chat을 키보드로 닫음 | 11 | TODO | — |
+| ZI-03 | Interaction Target | 공통 target 데이터 구조 사용 | 11 | DONE | Three typed mission targets, unique ID tests |
+| ZI-04 | 근접 판정 | radius 안에서만 활성화 | 11 | DONE | Inclusive range and reachable-point tests |
+| ZI-05 | 최근접 대상 | 겹칠 때 가장 가까운 하나 선택 | 11 | DONE | Overlapping target nearest-selection test |
+| ZI-06 | `E` Prompt | 대상별 DOM 안내 표시 | 11 | DONE | Prompt render and keyboard action tests |
+| ZI-07 | `ESC` 닫기 | Modal과 Chat을 키보드로 닫음 | 11/12/18 | IN PROGRESS | Shared close action ready; Modal/Chat integration pending |
 | ZI-08 | 정보 Modal | Vision, Factory, AI/SDM 콘텐츠 표시 | 12 | TODO | — |
 
 ## 7. Mission System

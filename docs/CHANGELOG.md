@@ -2,6 +2,25 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 11] — Interaction system
+
+### Added
+
+- Company Vision Display, Smart Factory Console, AI / SDM Monitor를 공통 mission `InteractionTarget` 데이터로 정의했다.
+- Player의 World 좌표와 target의 반경을 비교해 활성 범위의 가장 가까운 target 하나만 선택하는 tracker를 추가했다.
+- 현재 근접 target과 활성 interaction을 Canvas 밖 UI와 공유하는 Zustand 상태를 추가했다.
+- 근접 시 `E` 안내를 표시하고, `E`로 활성화한 후 `ESC`로 닫는 DOM Interaction Prompt를 추가했다.
+- 반경 경계, 최근접 선택, 실제 collider 기반 접근 가능성, 폼 포커스 예외, Store와 Prompt 상태 테스트를 추가했다.
+
+### Changed
+
+- Onboarding overlay에 nearest target, `E` action, `ESC` close 상태를 반영했다.
+
+### Notes
+
+- 이번 단계에서는 공통 활성 상태까지 연결했으며 실제 정보 콘텐츠와 Modal은 Commit 12에서 추가한다.
+- Core Value Station과 IX는 빈 기능을 미리 노출하지 않고 각 구현 단계에서 target을 확장한다.
+
 ## [Commit 10] — World collision
 
 ### Added

@@ -5,6 +5,7 @@ import { FactoryEnvironment } from "./factory-environment";
 import { FactoryZones } from "./factory-zones";
 import { Player } from "./player";
 import { PlayerFollowCamera } from "./player-follow-camera";
+import { PlayerInteractionTracker } from "./player-interaction-tracker";
 import { PlayerZoneTracker } from "./player-zone-tracker";
 
 export function FactoryScene() {
@@ -35,6 +36,7 @@ export function FactoryScene() {
       <FactoryZones />
       <Player playerRef={playerRef} />
       <PlayerFollowCamera targetRef={playerRef} />
+      <PlayerInteractionTracker targetRef={playerRef} />
       <PlayerZoneTracker targetRef={playerRef} />
     </>
   );

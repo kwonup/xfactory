@@ -148,3 +148,16 @@ Zustand 5를 직접 dependency로 추가하고 Store에는 `currentZone`과 sett
 ### 이유
 
 Canvas 내부 Player 위치와 Canvas 밖 HUD, 이후 Chat/RAG Context가 동일한 Zone 상태를 공유해야 한다. 현재 필요한 필드만 추가하면 React Context 연결을 반복하지 않으면서 다음 기능을 미리 구현하지 않을 수 있다.
+
+## ADR-012 — Interaction 판정과 UI를 분리한다
+
+- 상태: Accepted
+- 결정일: 2026-08-09
+
+### 결정
+
+Interaction target은 World 좌표와 반경을 가진 공통 데이터로 정의한다. Canvas 내 tracker는 Player와 가장 가까운 target만 Zustand에 기록하고, 입력과 Prompt는 Canvas 밖 DOM에서 처리한다.
+
+### 이유
+
+각 3D object에 거리 계산과 키보드 listener를 반복하지 않아도 된다. 최근접 선택을 순수 함수로 검증할 수 있고, 향후 Info Modal·Core Value Quest·IX Chat이 동일한 활성·닫기 흐름을 재사용할 수 있다.

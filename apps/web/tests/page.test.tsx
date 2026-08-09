@@ -22,11 +22,12 @@ describe("OnboardingPage", () => {
     const markup = renderToStaticMarkup(<OnboardingPage />);
 
     expect(markup).toContain("OUTDOOR FACTORY");
-    expect(markup).toContain("WORLD COLLISION / ACTIVE");
+    expect(markup).toContain("INTERACTION SYSTEM / ACTIVE");
     expect(markup).toContain("INITIALIZING 3D SCENE");
     expect(markup).toContain("CURRENT ZONE");
-    expect(markup).toContain("LIGHTWEIGHT");
-    expect(markup).toContain("AABB COLLIDERS");
+    expect(markup).toContain("NEAREST");
+    expect(markup).toContain("PROXIMITY TRACKER");
+    expect(markup).toContain('aria-live="polite"');
     expect(markup).toContain('href="/"');
   });
 });
