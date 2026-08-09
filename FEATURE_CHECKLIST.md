@@ -32,9 +32,9 @@
 
 | ID | 필수 기능 | 완료 조건 | 예정 Commit | 상태 | 검증 증거 |
 |---|---|---|---:|---|---|
-| LN-01 | Landing Page | 프로젝트명, 설명, 주요 CTA가 표시됨 | 02 | TODO | — |
-| LN-02 | Factory 진입 | `ENTER FACTORY` 클릭 시 `/onboarding`으로 이동함 | 02 | TODO | — |
-| LN-03 | 기본 반응형 대응 | 데스크톱과 모바일에서 핵심 콘텐츠가 잘리지 않음 | 02 | TODO | — |
+| LN-01 | Landing Page | 프로젝트명, 설명, 주요 CTA가 표시됨 | 02 | DONE | HomePage render test, production build |
+| LN-02 | Factory 진입 | `ENTER FACTORY` 클릭 시 `/onboarding`으로 이동함 | 02 | DONE | CTA route test, `/onboarding` static route build |
+| LN-03 | 기본 반응형 대응 | 데스크톱과 모바일에서 핵심 콘텐츠가 잘리지 않음 | 02 | DONE | Responsive breakpoints, production build |
 
 ## 3. 3D Factory Experience
 
