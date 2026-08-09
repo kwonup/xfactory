@@ -1,0 +1,18 @@
+{
+  "name": "interx-world",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm --workspace @interx-world/web run dev",
+    "build": "npm --workspace @interx-world/web run build",
+    "lint": "npm --workspace @interx-world/web run lint",
+    "typecheck": "npm --workspace @interx-world/web run typecheck",
+    "test": "npm --workspace @interx-world/web run test"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

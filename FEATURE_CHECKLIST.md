@@ -21,12 +21,12 @@
 
 | ID | 필수 기능 | 완료 조건 | 예정 Commit | 상태 | 검증 증거 |
 |---|---|---|---:|---|---|
-| PF-01 | Next.js + TypeScript 앱 | Frontend 개발 서버와 production build가 실행됨 | 01 | TODO | — |
-| PF-02 | Tailwind CSS 구성 | 기본 스타일과 반응형 유틸리티가 적용됨 | 01 | TODO | — |
-| PF-03 | FastAPI 앱 | Backend가 실행되고 `GET /health`가 200을 반환함 | 01 | TODO | — |
-| PF-04 | Monorepo 기본 구조 | `apps/web`, `apps/api`, `docs` 구조가 구성됨 | 01 | TODO | — |
-| PF-05 | 환경 변수 템플릿 | `.env.example`만 추적되고 실제 비밀키가 포함되지 않음 | 01 | TODO | — |
-| PF-06 | 기본 프로젝트 문서 | README에 실행 방법과 기본 구조가 설명됨 | 01 | TODO | — |
+| PF-01 | Next.js + TypeScript 앱 | Frontend 개발 서버와 production build가 실행됨 | 01 | DONE | `npm run build`, `HEAD /` 200 |
+| PF-02 | Tailwind CSS 구성 | 기본 스타일과 반응형 유틸리티가 적용됨 | 01 | DONE | Frontend build 및 smoke test 통과 |
+| PF-03 | FastAPI 앱 | Backend가 실행되고 `GET /health`가 200을 반환함 | 01 | DONE | `pytest`, `GET /health` 200 |
+| PF-04 | Monorepo 기본 구조 | `apps/web`, `apps/api`, `docs` 구조가 구성됨 | 01 | DONE | Commit 01 파일 구조 확인 |
+| PF-05 | 환경 변수 템플릿 | `.env.example`만 추적되고 실제 비밀키가 포함되지 않음 | 01 | DONE | `.gitignore`와 추적 파일 확인 |
+| PF-06 | 기본 프로젝트 문서 | README에 실행 방법과 기본 구조가 설명됨 | 01 | DONE | README 실행 절차 확인 |
 
 ## 2. Landing and Navigation
 
@@ -232,4 +232,3 @@
 - [ ] 최종 완료 조건을 확정한다.
   - `AGENTS.md` Commit 23 기준: 4개 Mission 완료
   - MVP 전체 흐름 권장안: 4개 Mission + 12개 Core Value + Reflection 완료
-
