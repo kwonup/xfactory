@@ -2,6 +2,12 @@ import {
   CORE_VALUE_STATIONS,
   type CoreValueStationId,
 } from "@/features/core-values/value-stations";
+import {
+  IX_NPC_INTERACTION_POSITION,
+  IX_NPC_INTERACTION_RADIUS,
+  IX_NPC_TARGET_ID,
+  type IxNpcTargetId,
+} from "@/features/ix/ix-config";
 
 export type InteractionTargetType = "core-value" | "info" | "mission" | "npc";
 
@@ -9,7 +15,8 @@ export type InteractionTargetId =
   | "company-vision-display"
   | "smart-factory-console"
   | "ai-sdm-monitor"
-  | CoreValueStationId;
+  | CoreValueStationId
+  | IxNpcTargetId;
 
 export type InteractionTarget = {
   id: InteractionTargetId;
@@ -62,6 +69,14 @@ export const INTERACTION_TARGETS: readonly InteractionTarget[] = [
       type: "core-value",
     }),
   ),
+  {
+    id: IX_NPC_TARGET_ID,
+    position: IX_NPC_INTERACTION_POSITION,
+    prompt: "IX와 대화하기",
+    radius: IX_NPC_INTERACTION_RADIUS,
+    title: "IX — AI Onboarding Buddy",
+    type: "npc",
+  },
 ];
 
 export const INTERACTION_TARGET_BY_ID = Object.fromEntries(

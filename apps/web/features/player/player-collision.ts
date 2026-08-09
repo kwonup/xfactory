@@ -40,7 +40,7 @@ export const WORLD_COLLIDERS: readonly AxisAlignedCollider[] = [
   { id: "value-station-c", minX: -1.82, maxX: -0.78, minZ: -0.12, maxZ: 0.92 },
   { id: "value-station-d", minX: 0.78, maxX: 1.82, minZ: -0.12, maxZ: 0.92 },
   { id: "core-value-pedestal", minX: -0.5, maxX: 0.5, minZ: -0.95, maxZ: 0.05 },
-  { id: "ix-pedestal", minX: 5.43, maxX: 6.67, minZ: 2.03, maxZ: 3.27 },
+  { id: "ix-pedestal", minX: 5.27, maxX: 6.83, minZ: 1.87, maxZ: 3.43 },
   { id: "ix-bench", minX: 5.42, maxX: 6.68, minZ: 0.9, maxZ: 1.38 },
 ];
 

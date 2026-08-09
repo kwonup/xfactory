@@ -2,6 +2,29 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 17] — IX NPC
+
+### Added
+
+- 외부 모델 없이 low-poly geometry로 구성한 친근한 로봇형 IX NPC를 추가했다.
+- 몸체 bob, 고개 움직임, antenna signal을 가진 가벼운 Idle animation을 추가했다.
+- animation 요청이 없거나 지원하지 않는 이름이면 안전하게 Idle을 사용하는 fallback을 추가했다.
+- `IX — AI Onboarding Buddy` 정체성과 접근 안내를 보여 주는 DOM nameplate를 3D 위치에 연결했다.
+- IX 접근 반경에서 `E`로 대화 진입 상태를 활성화하고 `ESC`로 닫는 공통 Interaction Target을 추가했다.
+- animation fallback, 접근 가능 위치, Store 진입·닫기, nameplate 상태를 검증하는 회귀 테스트를 추가했다.
+
+### Changed
+
+- IX Area의 임시 pedestal 표식을 실제 IX NPC와 낮은 전용 platform으로 교체했다.
+- 전용 platform 크기에 맞게 Player collider 범위를 조정했다.
+- 활성화된 IX nameplate가 대화 채널 준비 상태와 닫기 조작을 안내하도록 했다.
+
+### Notes
+
+- 이번 단계의 `E` 동작은 대화 진입 상태까지만 만든다. 질문 입력, 추천 질문, 응답과 Chat 상태 UI는 Commit 18의 범위다.
+- IX 접근만으로 Mission 04를 완료하지 않는다. 성공한 Chat 응답을 받은 뒤에만 Mission event를 전달한다.
+- 외부 3D asset을 사용하지 않아 추가 asset 출처나 라이선스 항목은 없다.
+
 ## [Commit 16] — Core Value Quest
 
 ### Added

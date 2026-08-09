@@ -184,7 +184,7 @@ apps/api/app
 - Value Passport와 Reflection
 - 평가와 점수화 배제
 
-### Commit 17 — IX NPC
+### Commit 17 — IX NPC · 완료
 
 - Stylized IX 또는 geometry fallback
 - Idle, nameplate, 대화 proximity

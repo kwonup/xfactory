@@ -226,3 +226,16 @@ Core Value Store에는 경험한 Value ID와 12개 완료 후 선택한 첫 주 
 ### 이유
 
 이 Quest의 목적은 직원 평가가 아니라 핵심가치를 업무 상황에 연결해 보는 온보딩 경험이다. 최소한의 경험 상태만 유지하면 Value Passport 진행률을 안정적으로 계산하면서 선택 이력을 성향이나 적합도 분석으로 오용할 여지를 줄일 수 있다.
+
+## ADR-018 — IX NPC와 Chat UI를 단계적으로 분리한다
+
+- 상태: Accepted
+- 결정일: 2026-08-09
+
+### 결정
+
+IX NPC는 외부 model dependency 없이 코드 기반 geometry와 안전한 Idle fallback으로 구현한다. Commit 17에서는 nameplate와 공통 Interaction Store의 대화 진입 상태까지만 제공하고, 입력·응답·상태를 가진 DOM Chat Panel은 Commit 18에서 이 활성 상태에 연결한다.
+
+### 이유
+
+NPC 표현과 대화 기능을 분리하면 model 또는 animation 누락 여부와 무관하게 접근 가능한 진입점을 먼저 검증할 수 있다. 또한 IX에게 접근한 행위와 성공한 Chat 응답을 구분해 Mission 04가 조기에 완료되는 것을 방지한다.

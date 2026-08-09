@@ -819,6 +819,85 @@ a {
   letter-spacing: 0.04em;
 }
 
+.ix-nameplate {
+  display: grid;
+  grid-template-columns: 2.2rem minmax(9rem, 1fr) 0.55rem;
+  align-items: center;
+  gap: 0.65rem;
+  width: max-content;
+  border: 1px solid rgba(46, 83, 70, 0.18);
+  border-radius: 0.85rem;
+  background: rgba(249, 253, 248, 0.92);
+  padding: 0.5rem 0.65rem;
+  box-shadow: 0 0.8rem 2rem rgba(42, 72, 63, 0.16);
+  color: #29463f;
+  backdrop-filter: blur(12px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.ix-nameplate[data-state="conversation-ready"] {
+  border-color: rgba(63, 128, 88, 0.48);
+  background: rgba(238, 248, 235, 0.96);
+  box-shadow: 0 0.8rem 2rem rgba(63, 128, 88, 0.2);
+}
+
+.ix-nameplate-mark {
+  display: grid;
+  width: 2.2rem;
+  height: 2.2rem;
+  place-items: center;
+  border: 1px solid rgba(63, 128, 88, 0.34);
+  border-radius: 0.62rem;
+  background: #3f8058;
+  color: #f4ffd4;
+  font-family: "Courier New", monospace;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.ix-nameplate-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ix-nameplate-copy strong,
+.ix-nameplate-copy small {
+  font-family: "Courier New", monospace;
+  white-space: nowrap;
+}
+
+.ix-nameplate-copy strong {
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
+}
+
+.ix-nameplate-copy small {
+  color: #668078;
+  font-size: 0.48rem;
+}
+
+.ix-nameplate[data-state="conversation-ready"] .ix-nameplate-copy small {
+  color: #3f8058;
+  font-weight: 700;
+}
+
+.ix-nameplate-signal {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #88b89a;
+}
+
+.ix-nameplate[data-state="conversation-ready"] .ix-nameplate-signal {
+  background: #a8d84c;
+  box-shadow: 0 0 0.75rem rgba(143, 195, 79, 0.7);
+  animation: ix-signal-pulse 1.5s ease-in-out infinite;
+}
+
 .information-modal-backdrop {
   position: absolute;
   inset: 0;
@@ -1575,6 +1654,18 @@ a {
 @keyframes loader-spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes ix-signal-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.82);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
   }
 }
 

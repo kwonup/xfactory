@@ -24,10 +24,12 @@ describe("interaction targets", () => {
     const coreValueTargets = INTERACTION_TARGETS.filter(
       (target) => target.type === "core-value",
     );
+    const npcTargets = INTERACTION_TARGETS.filter((target) => target.type === "npc");
 
-    expect(INTERACTION_TARGETS).toHaveLength(7);
+    expect(INTERACTION_TARGETS).toHaveLength(8);
     expect(missionTargets).toHaveLength(3);
     expect(coreValueTargets).toHaveLength(4);
+    expect(npcTargets).toHaveLength(1);
     expect(new Set(ids).size).toBe(ids.length);
 
     for (const target of INTERACTION_TARGETS) {

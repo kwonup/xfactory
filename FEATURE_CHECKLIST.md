@@ -118,8 +118,8 @@
 
 | ID | 필수 기능 | 완료 조건 | Commit | 상태 | 검증 증거 |
 |---|---|---|---:|---|---|
-| IX-01 | IX NPC | NPC, Idle fallback, nameplate 표시 | 17 | TODO | — |
-| IX-02 | 근접 대화 진입 | 범위 안에서 `E`로 Chat 열기 | 17 | TODO | — |
+| IX-01 | IX NPC | NPC, Idle fallback, nameplate 표시 | 17 | DONE | Geometry NPC build, animation fallback and nameplate render tests |
+| IX-02 | 근접 대화 진입 | 범위 안에서 `E`로 Chat 열기 | 17 | DONE | Reachable NPC target, shared `E` activation and `ESC` close tests |
 | IX-03 | DOM Chat Panel | Canvas 위 일반 React UI 사용 | 18 | TODO | — |
 | IX-04 | 입력과 추천 질문 | 질문 입력·전송·예시 선택 | 18 | TODO | — |
 | IX-05 | Chat 상태 | idle/loading/success/error 구분 | 18 | TODO | — |

@@ -1,6 +1,9 @@
 import type { ReactNode } from "react";
 
 import { CORE_VALUE_STATIONS } from "@/features/core-values/value-stations";
+import { IX_AREA_POSITION, IX_NPC_LOCAL_POSITION } from "@/features/ix/ix-config";
+
+import { IxNpc } from "./ix-npc";
 
 type Position = [number, number, number];
 
@@ -254,10 +257,8 @@ function GardenBench({ position, rotation = 0 }: { position: Position; rotation?
 }
 
 function IxArea() {
-  const accent = "#59a56d";
-
   return (
-    <group position={[6.05, 0.28, 2.65]}>
+    <group position={IX_AREA_POSITION}>
       <mesh position={[0, 0.04, 0]} receiveShadow>
         <cylinderGeometry args={[2.25, 2.25, 0.1, 28]} />
         <meshStandardMaterial color="#a9d69a" roughness={0.96} flatShading />
@@ -266,14 +267,11 @@ function IxArea() {
         <ringGeometry args={[1.15, 1.28, 32]} />
         <meshStandardMaterial color="#e6dfc9" roughness={0.9} />
       </mesh>
-      <mesh position={[0, 0.52, 0]} castShadow>
-        <cylinderGeometry args={[0.46, 0.62, 0.92, 14]} />
+      <mesh position={[0, 0.2, 0]} castShadow receiveShadow>
+        <cylinderGeometry args={[0.68, 0.78, 0.28, 14]} />
         <meshStandardMaterial color="#e9e3d5" roughness={0.84} flatShading />
       </mesh>
-      <mesh position={[0, 1.18, 0]} castShadow>
-        <octahedronGeometry args={[0.42, 0]} />
-        <meshStandardMaterial color={accent} roughness={0.7} flatShading />
-      </mesh>
+      <IxNpc position={IX_NPC_LOCAL_POSITION} />
       <GardenBench position={[0, 0, -1.5]} />
     </group>
   );
