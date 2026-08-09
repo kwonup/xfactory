@@ -11,7 +11,8 @@ X-FACTORY는 `X-factor`와 `INTERX의 Factory`라는 두 가지 의미를 담은
 - React Three Fiber Canvas와 기본 loading fallback 구현 완료
 - 밝은 잔디, 순환형 도로, 보행로와 공장 작업 바닥 구현 완료
 - 소규모 야외 World 경계와 low-poly 자연물 구현 완료
-- Player, Mission, Core Value Quest, IX Chat, LangChain RAG는 이후 단계에서 구현
+- 코드 기반 Stylized Player와 절차적 Idle/Walk fallback 구현 완료
+- Player 이동, Mission, Core Value Quest, IX Chat, LangChain RAG는 이후 단계에서 구현
 
 현재 3D Scene은 기반 지형 단계입니다. 소형 공장동과 각 온보딩 Zone은 이후 지정된 Commit에서 추가합니다.
 

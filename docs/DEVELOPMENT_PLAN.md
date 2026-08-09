@@ -111,7 +111,7 @@ apps/api/app
 - 전체가 한눈에 들어오는 소규모 layout
 - Player, Zone 판정, Interaction은 구현하지 않음
 
-### Commit 06 — Stylized player
+### Commit 06 — Stylized player · 완료
 
 - 친근한 low-poly Player 또는 geometry fallback
 - spawn 위치

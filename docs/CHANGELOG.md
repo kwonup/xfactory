@@ -2,6 +2,21 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 06] — Stylized player
+
+### Added
+
+- 큰 머리와 작은 몸 비율의 친근한 low-poly Player를 code geometry로 구현했다.
+- 안전모, 작업복, 명찰과 단순한 얼굴을 독자적인 디자인으로 구성했다.
+- 공장 작업 바닥 앞쪽에 명시적인 spawn 위치를 추가했다.
+- Idle과 Walk를 지원하는 절차적 limb animation 기반을 추가했다.
+- animation이 누락되거나 지원되지 않을 때 Idle로 복구하는 fallback과 단위 테스트를 추가했다.
+
+### Notes
+
+- 외부 Character Asset과 새 dependency는 사용하지 않았다.
+- 이번 단계에서는 Player를 Idle 상태로 표시하며 키보드 이동은 연결하지 않았다.
+
 ## [Commit 05] — Bright outdoor factory foundation
 
 ### Changed

@@ -2,6 +2,7 @@ import { useThree } from "@react-three/fiber";
 import { useLayoutEffect } from "react";
 
 import { FactoryEnvironment } from "./factory-environment";
+import { Player } from "./player";
 
 function SceneCamera() {
   const camera = useThree((state) => state.camera);
@@ -38,6 +39,7 @@ export function FactoryScene() {
       />
 
       <FactoryEnvironment />
+      <Player />
     </>
   );
 }
