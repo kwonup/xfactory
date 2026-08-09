@@ -118,3 +118,16 @@ Codex는 구현과 검증 후 한국어 Conventional Commit 메시지만 추천�
 ### 이유
 
 현재 overview camera와 다음 elevated follow camera에서 예측 가능한 조작 방향을 유지할 수 있다. 매 frame React render 없이 이동과 animation을 갱신하여 3D Scene 성능도 안정적으로 유지한다.
+
+## ADR-010 — Follow Camera는 고정된 World 방향을 유지한다
+
+- 상태: Accepted
+- 결정일: 2026-08-09
+
+### 결정
+
+Camera는 Player 위치를 부드럽게 추적하지만 Player 회전에 맞춰 공전하지 않는다. 높은 고정 offset과 look target offset을 사용하고 position과 target을 서로 다른 응답 속도로 보간한다.
+
+### 이유
+
+작은 디오라마형 공장의 방향성을 일관되게 유지하고, 방향 전환 때마다 배경이 회전해 발생하는 멀미와 시각적 혼란을 줄일 수 있다. World 축 기반 방향키 조작과도 자연스럽게 연결된다.

@@ -5,17 +5,15 @@ import { useRef, type RefObject } from "react";
 import { Vector3, type Group } from "three";
 
 import { resolvePlayerAnimation } from "@/features/player/player-animation";
+import { PLAYER_SPAWN_POSITION, type PlayerPosition } from "@/features/player/player-config";
 import { dampAngle, writeMovementDirection } from "@/features/player/player-controls";
 import { usePlayerControls } from "@/hooks/use-player-controls";
 
-type Position = [number, number, number];
-
 type PlayerProps = {
   animation?: string | null;
-  position?: Position;
+  playerRef?: RefObject<Group | null>;
+  position?: PlayerPosition;
 };
-
-export const PLAYER_SPAWN_POSITION: Position = [0, 0.28, 3.35];
 
 const PLAYER_MOVE_SPEED = 3.2;
 const PLAYER_ROTATION_SMOOTHING = 11;
@@ -114,8 +112,13 @@ function PlayerLeg({ side, limbRef }: LimbProps) {
   );
 }
 
-export function Player({ animation: requestedAnimation, position = PLAYER_SPAWN_POSITION }: PlayerProps) {
-  const playerRef = useRef<Group>(null);
+export function Player({
+  animation: requestedAnimation,
+  playerRef: externalPlayerRef,
+  position = PLAYER_SPAWN_POSITION,
+}: PlayerProps) {
+  const internalPlayerRef = useRef<Group>(null);
+  const playerRef = externalPlayerRef ?? internalPlayerRef;
   const leftArmRef = useRef<Group>(null);
   const rightArmRef = useRef<Group>(null);
   const leftLegRef = useRef<Group>(null);

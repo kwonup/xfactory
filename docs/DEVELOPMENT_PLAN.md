@@ -124,7 +124,7 @@ apps/api/app
 - Idle/Walk 전환
 - 폼 focus와 브라우저 scroll 예외 처리
 
-### Commit 08 — Elevated follow camera
+### Commit 08 — Elevated follow camera · 완료
 
 - 높은 Third Person Camera
 - 부드러운 position/look-at 보간

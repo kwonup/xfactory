@@ -1,24 +1,15 @@
-import { useThree } from "@react-three/fiber";
-import { useLayoutEffect } from "react";
+import { useRef } from "react";
+import type { Group } from "three";
 
 import { FactoryEnvironment } from "./factory-environment";
 import { Player } from "./player";
-
-function SceneCamera() {
-  const camera = useThree((state) => state.camera);
-
-  useLayoutEffect(() => {
-    camera.lookAt(0, 0.4, -0.5);
-    camera.updateProjectionMatrix();
-  }, [camera]);
-
-  return null;
-}
+import { PlayerFollowCamera } from "./player-follow-camera";
 
 export function FactoryScene() {
+  const playerRef = useRef<Group>(null);
+
   return (
     <>
-      <SceneCamera />
       <color attach="background" args={["#d9eef4"]} />
       <fog attach="fog" args={["#d9eef4", 34, 66]} />
 
@@ -39,7 +30,8 @@ export function FactoryScene() {
       />
 
       <FactoryEnvironment />
-      <Player />
+      <Player playerRef={playerRef} />
+      <PlayerFollowCamera targetRef={playerRef} />
     </>
   );
 }

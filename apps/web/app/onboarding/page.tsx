@@ -17,35 +17,35 @@ export default function OnboardingPage() {
 
         <div className="scene-stage">
           <span className="status-dot" aria-hidden="true" />
-          PLAYER MOVEMENT / ACTIVE
+          FOLLOW CAMERA / ACTIVE
         </div>
       </header>
 
       <section className="scene-intro" aria-labelledby="scene-title">
-        <p>ONBOARDING / PLAYER CONTROL</p>
+        <p>ONBOARDING / CAMERA RIG</p>
         <h1 id="scene-title">OUTDOOR FACTORY</h1>
-        <span>방향키로 플레이어를 움직여보세요</span>
+        <span>카메라가 플레이어를 부드럽게 따라갑니다</span>
       </section>
 
       <aside className="scene-telemetry" aria-label="3D Scene 구성 정보">
         <dl>
           <div>
             <dt>PLAYER</dt>
-            <dd>IDLE / WALK</dd>
+            <dd>TRACKED</dd>
           </div>
           <div>
-            <dt>MOVE</dt>
-            <dd>ARROW KEYS</dd>
+            <dt>HEIGHT</dt>
+            <dd>ELEVATED</dd>
           </div>
           <div>
             <dt>CAMERA</dt>
-            <dd>STATIC</dd>
+            <dd>ROTATION LOCKED</dd>
           </div>
         </dl>
       </aside>
 
       <p className="scene-foundation-note">
-        KEYBOARD CONTROL
+        THIRD PERSON CAMERA
         <span>ACTIVE</span>
       </p>
     </main>

@@ -2,6 +2,26 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 08] — Elevated follow camera
+
+### Added
+
+- Player보다 높은 위치에서 내려다보는 Third Person Follow Camera를 추가했다.
+- Player position을 기준으로 camera position과 look target을 각각 부드럽게 보간한다.
+- frame rate와 무관한 exponential smoothing factor를 적용하고 단위 테스트를 추가했다.
+- Player의 Idle/Walk bob이 Camera 흔들림으로 전달되지 않도록 기준 높이를 고정했다.
+
+### Changed
+
+- 초기 Camera 위치와 FOV를 Follow Camera 설정과 일치시켰다.
+- Camera orientation을 World 기준으로 고정해 Player 회전 시 화면이 과도하게 회전하지 않도록 했다.
+- Onboarding overlay에 tracked, elevated, rotation locked 상태를 표시했다.
+
+### Notes
+
+- Camera가 Player를 따라가는 동안 Player는 화면 중앙보다 약간 아래에 유지된다.
+- World boundary가 아직 없으므로 Scene 밖 이동 제한은 Commit 10에서 적용한다.
+
 ## [Commit 07] — Arrow-key movement
 
 ### Added
