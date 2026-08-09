@@ -177,7 +177,7 @@ apps/api/app
 - 12개 Scenario, choices, feedback, takeaway
 - 공식 원문과 UX용 해석 구분
 
-### Commit 16 — Core Value Quest
+### Commit 16 — Core Value Quest · 완료
 
 - 4개 Station에서 Micro Quest 진행
 - 설명형 feedback

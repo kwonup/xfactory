@@ -18,19 +18,26 @@ afterEach(() => {
 });
 
 describe("interaction targets", () => {
-  it("defines unique mission targets with an unobstructed approach point", () => {
+  it("defines unique mission and Core Value targets with an unobstructed approach point", () => {
     const ids = INTERACTION_TARGETS.map((target) => target.id);
+    const missionTargets = INTERACTION_TARGETS.filter((target) => target.type === "mission");
+    const coreValueTargets = INTERACTION_TARGETS.filter(
+      (target) => target.type === "core-value",
+    );
 
-    expect(INTERACTION_TARGETS).toHaveLength(3);
+    expect(INTERACTION_TARGETS).toHaveLength(7);
+    expect(missionTargets).toHaveLength(3);
+    expect(coreValueTargets).toHaveLength(4);
     expect(new Set(ids).size).toBe(ids.length);
 
     for (const target of INTERACTION_TARGETS) {
+      const approachDirection =
+        target.type === "core-value" && target.position[2] < 0 ? -1 : 1;
       const approachPosition = {
         x: target.position[0],
-        z: target.position[2] + target.radius * 0.85,
+        z: target.position[2] + target.radius * 0.85 * approachDirection,
       };
 
-      expect(target.type).toBe("mission");
       expect(target.radius).toBeGreaterThan(0);
       expect(target.prompt.length).toBeGreaterThan(0);
       expect(isWithinInteractionRange(approachPosition, target)).toBe(true);

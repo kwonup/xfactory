@@ -1,9 +1,11 @@
 import Link from "next/link";
 
+import { CoreValueQuestModal } from "@/components/onboarding/core-value-quest-modal";
 import { CurrentZoneIndicator } from "@/components/onboarding/current-zone-indicator";
 import { InformationModal } from "@/components/onboarding/information-modal";
 import { InteractionPrompt } from "@/components/onboarding/interaction-prompt";
 import { MissionHud } from "@/components/onboarding/mission-hud";
+import { ValuePassport } from "@/components/onboarding/value-passport";
 import { OnboardingExperience } from "@/components/three/onboarding-experience";
 
 export default function OnboardingPage() {
@@ -33,8 +35,10 @@ export default function OnboardingPage() {
 
       <CurrentZoneIndicator />
       <MissionHud />
+      <ValuePassport />
       <InteractionPrompt />
       <InformationModal />
+      <CoreValueQuestModal />
 
       <aside className="scene-telemetry" aria-label="조작 안내">
         <dl>

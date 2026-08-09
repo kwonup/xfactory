@@ -108,11 +108,11 @@
 | CV-01 | 12개 Core Value 데이터 | 공식 명칭과 설명 누락 없음 | 15 | DONE | Official source marker, order and full coverage unit tests |
 | CV-02 | 4개 Cluster | Cluster마다 정확히 3개 Value | 15 | DONE | Four-cluster partition and exact three-value membership tests |
 | CV-03 | 12개 Scenario | Value별 상황, 선택지, feedback, takeaway | 15 | DONE | One scenario per Value, three choices, feedback and takeaway tests |
-| CV-04 | 4개 Value Station | Station에서 3개 Micro Quest 실행 | 16 | TODO | — |
-| CV-05 | 설명형 피드백 | 점수 대신 선택과 기대 행동의 관계 설명 | 16 | TODO | — |
-| CV-06 | Value Passport | 12개 경험 여부와 진행률 표시 | 16 | TODO | — |
-| CV-07 | Reflection | 12개 완료 후 실천 행동 선택 | 16 | TODO | — |
-| CV-08 | 평가 기능 배제 | 적합도·합격·성향 점수 없음 | 16 | TODO | — |
+| CV-04 | 4개 Value Station | Station에서 3개 Micro Quest 실행 | 16 | DONE | Four reachable targets, cluster mapping and sequential Quest tests |
+| CV-05 | 설명형 피드백 | 점수 대신 선택과 기대 행동의 관계 설명 | 16 | DONE | Choice feedback, takeaway and experience-confirmation render tests |
+| CV-06 | Value Passport | 12개 경험 여부와 진행률 표시 | 16 | DONE | 0/12 and 12/12 progress, individual experience state tests |
+| CV-07 | Reflection | 12개 완료 후 실천 행동 선택 | 16 | DONE | Completion-gated first-week action Store and UI tests |
+| CV-08 | 평가 기능 배제 | 적합도·합격·성향 점수 없음 | 16 | DONE | Experience-only state, reflection disclaimer and no-scoring model tests |
 
 ## 9. IX NPC and Chat
 

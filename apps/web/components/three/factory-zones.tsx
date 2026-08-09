@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { CORE_VALUE_STATIONS } from "@/features/core-values/value-stations";
+
 type Position = [number, number, number];
 
 type BuildingProps = {
@@ -194,29 +196,27 @@ function AiSdmLab() {
 }
 
 function CoreValuePark() {
-  const stationColors = ["#f2b65d", "#72b8c8", "#7eb778", "#a988c5"];
-  const stationPositions: Position[] = [
-    [-1.3, 0.45, -0.85],
-    [1.3, 0.45, -0.85],
-    [-1.3, 0.45, 0.85],
-    [1.3, 0.45, 0.85],
-  ];
-
   return (
     <group position={[0, 0.28, -0.45]}>
       <mesh position={[0, 0.04, 0]} receiveShadow>
         <cylinderGeometry args={[2.35, 2.35, 0.1, 28]} />
         <meshStandardMaterial color="#bdd89a" roughness={0.96} flatShading />
       </mesh>
-      {stationPositions.map((position, index) => (
-        <group key={`value-station-${index}`} position={position}>
+      {CORE_VALUE_STATIONS.map((station) => (
+        <group key={station.id} name={station.id} position={station.visualPosition}>
           <mesh castShadow>
             <cylinderGeometry args={[0.42, 0.52, 0.78, 8]} />
-            <meshStandardMaterial color={stationColors[index]} roughness={0.8} flatShading />
+            <meshStandardMaterial color={station.accent} roughness={0.8} flatShading />
           </mesh>
           <mesh position={[0, 0.55, 0]} castShadow>
             <dodecahedronGeometry args={[0.28, 0]} />
-            <meshStandardMaterial color="#fff4c9" roughness={0.68} flatShading />
+            <meshStandardMaterial
+              color="#fff4c9"
+              emissive={station.accent}
+              emissiveIntensity={0.08}
+              roughness={0.68}
+              flatShading
+            />
           </mesh>
         </group>
       ))}

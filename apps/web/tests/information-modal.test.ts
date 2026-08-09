@@ -6,13 +6,13 @@ import { InformationModalContent } from "@/components/onboarding/information-mod
 import {
   createInformationInteractionEvent,
   INFORMATION_CONTENT_BY_TARGET,
+  INFORMATION_TARGET_IDS,
 } from "@/features/interaction/information-content";
-import { INTERACTION_TARGETS } from "@/features/interaction/interaction-targets";
 
 describe("information content", () => {
   it("covers every current mission target and labels unverified content", () => {
-    for (const target of INTERACTION_TARGETS) {
-      const content = INFORMATION_CONTENT_BY_TARGET[target.id];
+    for (const targetId of INFORMATION_TARGET_IDS) {
+      const content = INFORMATION_CONTENT_BY_TARGET[targetId];
 
       expect(content.status).toBe("[DEMO DATA]");
       expect(content.sourceLabel).toContain("사용자 제공");

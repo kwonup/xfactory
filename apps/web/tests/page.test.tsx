@@ -26,6 +26,8 @@ describe("OnboardingPage", () => {
     expect(markup).toContain("INITIALIZING 3D SCENE");
     expect(markup).toContain("CURRENT ZONE");
     expect(markup).toContain("MISSION STATUS");
+    expect(markup).toContain("VALUE PASSPORT");
+    expect(markup).toContain("FIRST WEEK REFLECTION");
     expect(markup).toContain('aria-valuenow="0"');
     expect(markup).toContain("ARROW KEYS");
     expect(markup).toContain("LIVE MISSION PROGRESS");

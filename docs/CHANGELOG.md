@@ -2,6 +2,29 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 16] — Core Value Quest
+
+### Added
+
+- Core Value Park의 기존 조형물 4개를 Cluster별 Value Station 상호작용 대상으로 연결했다.
+- 각 Station에서 미경험 Core Value 3개를 순서대로 진행하는 Micro Quest Modal을 추가했다.
+- 행동 선택 후 선택과 핵심가치의 연결을 설명하는 feedback과 takeaway 화면을 추가했다.
+- 12개 Value의 경험 여부와 진행률을 Cluster별로 보여 주는 Value Passport를 추가했다.
+- 12개 경험 완료 후 첫 업무 주간에 실천할 행동을 선택하는 Reflection을 추가했다.
+- Station 접근성, 순차 진행, 중복 방지, Passport 진행률, Reflection 잠금과 UI를 검증하는 회귀 테스트를 추가했다.
+
+### Changed
+
+- 공통 Interaction Target에 `core-value` 유형 4개를 추가하고 최근접 대상 선택 흐름을 그대로 재사용했다.
+- Core Value Park 조형물이 Station 데이터의 ID, 위치, accent를 사용하도록 연결했다.
+- Onboarding 화면에 Quest Modal과 접이식 Value Passport를 배치했다.
+
+### Notes
+
+- Store에는 선택지 결과가 아니라 Core Value 경험 ID와 사용자가 선택한 첫 주 실천 Value만 저장한다.
+- 모든 Scenario는 `[DEMO DATA]`이며 feedback은 설명형이다. 점수, 정답, 합격, 적합도 또는 직원 성향 분석을 제공하지 않는다.
+- Core Value 진행 상태의 localStorage 저장은 Commit 26의 범위다.
+
 ## [Commit 15] — Core Value content model
 
 ### Added

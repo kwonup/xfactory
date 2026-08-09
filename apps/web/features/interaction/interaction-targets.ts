@@ -1,9 +1,15 @@
+import {
+  CORE_VALUE_STATIONS,
+  type CoreValueStationId,
+} from "@/features/core-values/value-stations";
+
 export type InteractionTargetType = "core-value" | "info" | "mission" | "npc";
 
 export type InteractionTargetId =
   | "company-vision-display"
   | "smart-factory-console"
-  | "ai-sdm-monitor";
+  | "ai-sdm-monitor"
+  | CoreValueStationId;
 
 export type InteractionTarget = {
   id: InteractionTargetId;
@@ -46,6 +52,16 @@ export const INTERACTION_TARGETS: readonly InteractionTarget[] = [
     title: "AI / SDM Monitor",
     type: "mission",
   },
+  ...CORE_VALUE_STATIONS.map(
+    (station): InteractionTarget => ({
+      id: station.id,
+      position: station.interactionPosition,
+      prompt: station.prompt,
+      radius: 1.05,
+      title: station.title,
+      type: "core-value",
+    }),
+  ),
 ];
 
 export const INTERACTION_TARGET_BY_ID = Object.fromEntries(
