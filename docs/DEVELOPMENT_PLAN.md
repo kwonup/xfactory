@@ -159,7 +159,7 @@ apps/api/app
 - 확인된 공식 콘텐츠만 사용
 - Mission event 연결점 제공
 
-### Commit 13 — Mission state
+### Commit 13 — Mission state · 완료
 
 - 4개 Mission 데이터
 - 완료, 중복 방지, progress 계산

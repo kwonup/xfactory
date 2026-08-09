@@ -7,6 +7,7 @@ import {
   type InformationInteractionEvent,
   isInformationTargetId,
 } from "@/features/interaction/information-content";
+import { useMissionStore } from "@/stores/mission-store";
 import { useWorldStore } from "@/stores/world-store";
 
 type InformationModalContentProps = {
@@ -74,6 +75,7 @@ export function InformationModalContent({
 export function InformationModal({ onMissionEvent }: InformationModalProps) {
   const activeTargetId = useWorldStore((state) => state.activeInteractionTargetId);
   const closeInteraction = useWorldStore((state) => state.closeInteraction);
+  const completeMissionByEvent = useMissionStore((state) => state.completeMissionByEvent);
   const content =
     activeTargetId && isInformationTargetId(activeTargetId)
       ? INFORMATION_CONTENT_BY_TARGET[activeTargetId]
@@ -84,7 +86,10 @@ export function InformationModal({ onMissionEvent }: InformationModalProps) {
   }
 
   const handleConfirm = () => {
-    onMissionEvent?.(createInformationInteractionEvent(activeTargetId));
+    const event = createInformationInteractionEvent(activeTargetId);
+
+    completeMissionByEvent(event.missionEventId);
+    onMissionEvent?.(event);
     closeInteraction();
   };
 

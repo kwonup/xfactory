@@ -20,14 +20,14 @@ export default function OnboardingPage() {
 
         <div className="scene-stage">
           <span className="status-dot" aria-hidden="true" />
-          INFORMATION MODALS / ACTIVE
+          MISSION STATE / ACTIVE
         </div>
       </header>
 
       <section className="scene-intro" aria-labelledby="scene-title">
-        <p>ONBOARDING / DISCOVER</p>
+        <p>ONBOARDING / MISSIONS</p>
         <h1 id="scene-title">OUTDOOR FACTORY</h1>
-        <span>세 개의 안내 설비에서 온보딩 콘텐츠를 확인하세요</span>
+        <span>상호작용 확인 이벤트가 미션 진행 상태로 기록됩니다</span>
       </section>
 
       <CurrentZoneIndicator />
@@ -37,22 +37,22 @@ export default function OnboardingPage() {
       <aside className="scene-telemetry" aria-label="3D Scene 구성 정보">
         <dl>
           <div>
-            <dt>CONTENT</dt>
-            <dd>DEMO LABELED</dd>
+            <dt>MISSIONS</dt>
+            <dd>4 CONFIGURED</dd>
           </div>
           <div>
-            <dt>EVENT</dt>
-            <dd>READY</dd>
+            <dt>EVENTS</dt>
+            <dd>MAPPED</dd>
           </div>
           <div>
-            <dt>CLOSE</dt>
-            <dd>ESC</dd>
+            <dt>PROGRESS</dt>
+            <dd>ZUSTAND</dd>
           </div>
         </dl>
       </aside>
 
       <p className="scene-foundation-note">
-        DOM INFORMATION LAYER
+        MISSION LOGIC
         <span>ACTIVE</span>
       </p>
     </main>

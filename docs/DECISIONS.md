@@ -174,3 +174,16 @@ Interaction target은 World 좌표와 반경을 가진 공통 데이터로 정�
 ### 이유
 
 빈 Modal보다 전체 상호작용 흐름을 검증할 수 있으면서도, 확인되지 않은 INTERX 내부 정보가 실제 사실처럼 노출되는 위험을 피할 수 있다. 후속 공식 자료는 출처와 함께 대체한다.
+
+## ADR-014 — Mission Store에는 완료 ID만 저장한다
+
+- 상태: Accepted
+- 결정일: 2026-08-09
+
+### 결정
+
+Mission 정의와 event mapping은 정적 데이터로 관리하고, Zustand Store에는 `completedMissionIds`만 저장한다. 현재 Mission과 진행률은 완료 ID에서 계산하고 Store에 중복 저장하지 않는다.
+
+### 이유
+
+현재 Mission, 완료 수, 백분율을 독립적으로 수정하면 상태가 엇갈릴 수 있다. 최소 상태와 순수 파생 함수를 사용하면 중복 완료를 방지하고 후속 HUD와 persistence에서 하나의 원천만 참조할 수 있다.

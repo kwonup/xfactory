@@ -2,6 +2,28 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 13] — Mission state
+
+### Added
+
+- Discover INTERX, Explore Smart Factory, Understand AI / SDM, Meet IX의 순서·목표·완료 이벤트를 가진 4개 Mission 데이터를 추가했다.
+- 이벤트와 Mission ID를 일대일로 연결하는 매핑을 추가했다.
+- 완료한 Mission ID만 저장하고 동일 Mission을 중복 추가하지 않는 Zustand Mission Store를 추가했다.
+- 완료 수·전체 수·백분율과 첫 미완료 Mission을 계산하는 순수 함수를 추가했다.
+- Mission 정의, 이벤트 매핑, 0·50·100% 진행률, 현재 Mission, Store 중복 방지 테스트를 추가했다.
+
+### Changed
+
+- Information Modal의 확인 버튼이 상응하는 Mission 01~03을 완료하도록 연결했다.
+- Information content의 완료 이벤트 타입을 Mission 모듈의 단일 이벤트 정의에서 파생하도록 정리했다.
+- Onboarding overlay에 4개 Mission, event mapping, Zustand progress 상태를 반영했다.
+
+### Notes
+
+- Mission HUD와 실시간 진행률 표시는 Commit 14의 범위다.
+- Meet IX는 아직 완료될 수 없으며, 후속 Chat에서 성공한 답변을 받았을 때만 `ix-chat-response-received` 이벤트를 전달한다.
+- Mission 진행 상태의 localStorage 저장은 Commit 26의 범위다.
+
 ## [Commit 12] — Information interactions
 
 ### Added

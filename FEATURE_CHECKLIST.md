@@ -95,9 +95,9 @@
 
 | ID | 필수 기능 | 완료 조건 | Commit | 상태 | 검증 증거 |
 |---|---|---|---:|---|---|
-| MS-01 | 4개 Mission | 순서와 완료 조건을 데이터로 정의 | 13 | TODO | — |
-| MS-02 | 완료와 중복 방지 | 이벤트당 한 번만 완료 | 13 | TODO | — |
-| MS-03 | Progress 계산 | 완료 수와 백분율 계산 | 13 | TODO | — |
+| MS-01 | 4개 Mission | 순서와 완료 조건을 데이터로 정의 | 13 | DONE | Four ordered definitions and unique event mapping tests |
+| MS-02 | 완료와 중복 방지 | 이벤트당 한 번만 완료 | 13 | DONE | Zustand event completion and reference-stable duplicate test |
+| MS-03 | Progress 계산 | 완료 수와 백분율 계산 | 13 | DONE | 0/50/100% and current Mission unit tests |
 | MS-04 | Mission HUD | 현재·완료·대기 상태 구분 | 14 | TODO | — |
 | MS-05 | Context HUD | 현재 Zone과 조작법 표시 | 14 | TODO | — |
 

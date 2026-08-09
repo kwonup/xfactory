@@ -1,4 +1,5 @@
 import type { InteractionTargetId } from "@/features/interaction/interaction-targets";
+import type { MissionEventId } from "@/features/mission/missions";
 
 export const INFORMATION_TARGET_IDS = [
   "company-vision-display",
@@ -8,10 +9,10 @@ export const INFORMATION_TARGET_IDS = [
 
 export type InformationTargetId = (typeof INFORMATION_TARGET_IDS)[number];
 
-export type MissionInteractionEventId =
-  | "vision-display-reviewed"
-  | "smart-factory-reviewed"
-  | "ai-sdm-reviewed";
+export type MissionInteractionEventId = Exclude<
+  MissionEventId,
+  "ix-chat-response-received"
+>;
 
 export type InformationContent = {
   description: string;

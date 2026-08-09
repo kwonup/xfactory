@@ -22,11 +22,11 @@ describe("OnboardingPage", () => {
     const markup = renderToStaticMarkup(<OnboardingPage />);
 
     expect(markup).toContain("OUTDOOR FACTORY");
-    expect(markup).toContain("INFORMATION MODALS / ACTIVE");
+    expect(markup).toContain("MISSION STATE / ACTIVE");
     expect(markup).toContain("INITIALIZING 3D SCENE");
     expect(markup).toContain("CURRENT ZONE");
-    expect(markup).toContain("DEMO LABELED");
-    expect(markup).toContain("DOM INFORMATION LAYER");
+    expect(markup).toContain("4 CONFIGURED");
+    expect(markup).toContain("MISSION LOGIC");
     expect(markup).toContain('aria-live="polite"');
     expect(markup).toContain('href="/"');
   });
