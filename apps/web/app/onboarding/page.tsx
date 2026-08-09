@@ -24,7 +24,7 @@ export default function OnboardingPage() {
       <section className="scene-intro" aria-labelledby="scene-title">
         <p>ONBOARDING SPACE / 01</p>
         <h1 id="scene-title">FACTORY ACCESS</h1>
-        <span>3D 환경 초기화 완료</span>
+        <span>4개 온보딩 영역 준비 완료</span>
       </section>
 
       <aside className="scene-telemetry" aria-label="3D Scene 구성 정보">
@@ -46,7 +46,7 @@ export default function OnboardingPage() {
 
       <p className="scene-foundation-note">
         FACTORY ENVIRONMENT
-        <span>NEXT PHASE</span>
+        <span>ACTIVE</span>
       </p>
     </main>
   );

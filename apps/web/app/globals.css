@@ -664,6 +664,31 @@ a {
   white-space: nowrap;
 }
 
+.factory-area-label {
+  display: flex;
+  min-width: 8.5rem;
+  align-items: center;
+  gap: 0.65rem;
+  border: 1px solid;
+  background: rgba(5, 9, 6, 0.88);
+  padding: 0.55rem 0.7rem;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.38);
+  color: #eef5ef;
+  font-family: "Courier New", monospace;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.factory-area-label span {
+  font-size: 0.45rem;
+  letter-spacing: 0.09em;
+}
+
+.factory-area-label strong {
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+}
+
 @keyframes loader-spin {
   to {
     transform: rotate(360deg);

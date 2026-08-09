@@ -19,7 +19,7 @@ function SceneLoadingFallback() {
 export default function FactoryCanvas() {
   return (
     <Canvas
-      camera={{ fov: 42, near: 0.1, far: 100, position: [8, 7, 11] }}
+      camera={{ fov: 44, near: 0.1, far: 120, position: [14, 12, 18] }}
       dpr={[1, 1.5]}
       gl={{ antialias: true, alpha: false, powerPreference: "high-performance" }}
     >

@@ -2,28 +2,54 @@
 
 Immersive AI Onboarding Experience
 
-X-FACTORY는 `X-factor`와 `INTERX의 Factory`라는 두 가지 의미를 담은 프로젝트입니다. 신규 입사자가 웹 브라우저의 3D 공장을 탐색하고, 미션형 온보딩과 AI Onboarding Buddy `IX`를 경험하는 프로토타입입니다.
+X-FACTORY는 `X-factor`와 `INTERX의 Factory`라는 두 가지 의미를 담은 웹 기반 온보딩 프로토타입입니다. 신규 입사자가 작고 밝은 야외형 3D 스마트팩토리를 탐험하며 회사와 기술을 이해하고, Core Value Quest와 AI Onboarding Buddy `IX`를 경험하는 것을 목표로 합니다.
 
-현재 저장소는 Commit 01의 최소 Frontend/Backend 실행 환경만 포함합니다. 3D Scene, Mission, Core Value Quest, NPC, RAG는 이후 Commit Plan에 따라 한 단계씩 추가합니다.
+## Current Status
+
+- Next.js와 FastAPI 모노레포 기반 구성 완료
+- X-FACTORY Landing과 `/onboarding` route 구현 완료
+- React Three Fiber Canvas와 기본 loading fallback 구현 완료
+- 밝은 야외형 Smart Factory 방향과 단계별 개발 계획 확정
+- Player, Mission, Core Value Quest, IX Chat, LangChain RAG는 이후 단계에서 구현
+
+현재 작업 트리에 남아 있는 기존 실내 공장 Scene은 새 디자인의 완료 상태가 아닙니다. 다음 3D 단계에서 기존 Canvas와 geometry를 재사용해 밝은 야외 공장으로 전환합니다.
+
+## Visual Direction
+
+```text
+Bright · Cozy · Low-poly · Miniature · Industrial + Nature
+```
+
+- 거대한 Campus나 현실적인 실내 공장이 아닌 작은 야외 공장 단지
+- 잔디, 짧은 도로, 보행로, 소형 공장동과 연구동
+- 주요 Zone을 짧은 이동으로 탐색
+- 건물 내부 대신 설비, 안내판, Value Station, IX와 상호작용
 
 ## Repository Structure
 
 ```text
 .
 ├── apps/
-│   ├── api/       # FastAPI backend
-│   └── web/       # Next.js frontend
-├── docs/          # Architecture and content documents
-├── .env.example
-├── AGENTS.md
-└── FEATURE_CHECKLIST.md
+│   ├── api/                 # FastAPI backend
+│   └── web/                 # Next.js frontend
+├── docs/
+│   ├── content/             # RAG knowledge sources
+│   ├── CHANGELOG.md
+│   ├── DECISIONS.md
+│   ├── DEVELOPMENT_PLAN.md
+│   └── assets.md
+├── AGENTS.md                # Implementation rules
+├── FEATURE_CHECKLIST.md     # Required feature status
+└── .env.example
 ```
 
-## Prerequisites
+## Runtime Baseline
 
-- Node.js 20.9 이상
-- npm 10 이상
-- Python 3.9 이상
+- Node.js 24.x
+- npm 11.16.0
+- Python 3.13.15
+
+Node 범위는 root `package.json`, Python 정적 분석 기준은 `apps/api/pyproject.toml`에서 관리합니다.
 
 ## Frontend
 
@@ -76,4 +102,17 @@ pytest
 
 ## Environment Variables
 
-`.env.example`을 참고해 로컬 환경 파일을 생성합니다. 실제 API Key와 Service Role Key는 Git에 커밋하지 않습니다.
+`.env.example`을 참고해 로컬 환경 파일을 생성합니다. 실제 API Key와 Supabase Service Role Key는 Git에 포함하지 않습니다.
+
+## Project Documents
+
+- [개발 계획](./docs/DEVELOPMENT_PLAN.md)
+- [필수 기능 체크리스트](./FEATURE_CHECKLIST.md)
+- [기술·제품 결정](./docs/DECISIONS.md)
+- [변경 기록](./docs/CHANGELOG.md)
+- [3D 에셋 및 라이선스](./docs/assets.md)
+- [Core Value 공식 원문](./docs/content/core-values.md)
+
+## Commit Workflow
+
+한 번에 하나의 Commit 범위만 구현합니다. Codex는 구현과 검증 후 한국어 Conventional Commit 메시지만 추천하며, 실제 staging과 commit, push는 사용자가 수행합니다.
