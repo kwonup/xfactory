@@ -2,6 +2,27 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 12] — Information interactions
+
+### Added
+
+- Company Vision, Smart Factory, AI / SDM 상호작용에 대한 타입화된 정보 콘텐츠 모델을 추가했다.
+- 현재 저장소에 검증된 INTERX 회사·기술 자료가 없음을 알리고, 사용자 제공 온보딩 기획 범위만 `[DEMO DATA]`로 표시하는 콘텐츠를 구성했다.
+- 제목, 설명, 핵심 안내, 출처 상태, 닫기와 확인을 가진 DOM Information Modal을 추가했다.
+- Modal 확인 시 Commit 13의 Mission Store가 소비할 수 있는 타입화된 `information-interaction-confirmed` 이벤트 생성기를 추가했다.
+- 세 target의 콘텐츠 커버리지, DEMO 표시, Mission event mapping, Dialog 접근성 회귀 테스트를 추가했다.
+
+### Changed
+
+- Information Modal이 열린 동안 Player 이동과 Walk animation을 멈추도록 했다.
+- 활성 interaction은 간이 상태 문구 대신 실제 Modal을 표시하도록 Prompt 흐름을 조정했다.
+- Onboarding overlay에 DEMO 표시, Mission event 연결점, DOM information layer 상태를 반영했다.
+
+### Notes
+
+- 실제 INTERX 비전, 제품, 제조 공정, SDM 정의는 임의로 작성하지 않았다.
+- Mission 완료 상태와 중복 방지는 Commit 13의 범위다.
+
 ## [Commit 11] — Interaction system
 
 ### Added

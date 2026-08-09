@@ -153,7 +153,7 @@ apps/api/app
 - proximity와 nearest target
 - `E` prompt와 `ESC` 닫기
 
-### Commit 12 — Information interactions
+### Commit 12 — Information interactions · 완료
 
 - Company Vision, Smart Factory, AI/SDM 정보 Modal
 - 확인된 공식 콘텐츠만 사용

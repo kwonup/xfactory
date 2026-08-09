@@ -9,6 +9,7 @@ import { movePlayerWithCollisions } from "@/features/player/player-collision";
 import { PLAYER_SPAWN_POSITION, type PlayerPosition } from "@/features/player/player-config";
 import { dampAngle, writeMovementDirection } from "@/features/player/player-controls";
 import { usePlayerControls } from "@/hooks/use-player-controls";
+import { useWorldStore } from "@/stores/world-store";
 
 type PlayerProps = {
   animation?: string | null;
@@ -126,6 +127,7 @@ export function Player({
   const rightLegRef = useRef<Group>(null);
   const movementDirectionRef = useRef(new Vector3());
   const controlsRef = usePlayerControls();
+  const isInteractionActive = useWorldStore((state) => Boolean(state.activeInteractionTargetId));
 
   useFrame(({ clock }, delta) => {
     const player = playerRef.current;
@@ -140,7 +142,8 @@ export function Player({
 
     const elapsed = clock.elapsedTime;
     const movementDirection = movementDirectionRef.current;
-    const isMoving = writeMovementDirection(controlsRef.current, movementDirection);
+    const isMoving =
+      !isInteractionActive && writeMovementDirection(controlsRef.current, movementDirection);
 
     if (isMoving) {
       movePlayerWithCollisions(player.position, movementDirection, PLAYER_MOVE_SPEED * delta);

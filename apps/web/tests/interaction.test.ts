@@ -116,18 +116,10 @@ describe("interaction prompt", () => {
     const target = INTERACTION_TARGETS[0];
 
     const nearbyMarkup = renderToStaticMarkup(
-      createElement(InteractionPromptContent, { active: false, target }),
+      createElement(InteractionPromptContent, { target }),
     );
 
     expect(nearbyMarkup).toContain("Vision Display 알아보기");
     expect(nearbyMarkup).toContain("<kbd>E</kbd>");
-
-    const activeMarkup = renderToStaticMarkup(
-      createElement(InteractionPromptContent, { active: true, target }),
-    );
-
-    expect(activeMarkup).toContain("INTERACTION READY");
-    expect(activeMarkup).toContain("Company Vision Display");
-    expect(activeMarkup).toContain("<kbd>ESC</kbd>");
   });
 });

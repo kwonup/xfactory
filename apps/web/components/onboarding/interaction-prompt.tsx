@@ -10,30 +10,16 @@ import {
 import { useWorldStore } from "@/stores/world-store";
 
 type InteractionPromptContentProps = {
-  active: boolean;
   target: InteractionTarget | null;
 };
 
-export function InteractionPromptContent({ active, target }: InteractionPromptContentProps) {
+export function InteractionPromptContent({ target }: InteractionPromptContentProps) {
   return (
     <div className="interaction-prompt-slot" aria-live="polite">
       {target ? (
-        <div className={`interaction-prompt${active ? " is-active" : ""}`} role="status">
-          {active ? (
-            <>
-              <span>INTERACTION READY</span>
-              <strong>{target.title}</strong>
-              <small>
-                <kbd>ESC</kbd>
-                닫기
-              </small>
-            </>
-          ) : (
-            <>
-              <kbd>E</kbd>
-              <span>{target.prompt}</span>
-            </>
-          )}
+        <div className="interaction-prompt" role="status">
+          <kbd>E</kbd>
+          <span>{target.prompt}</span>
         </div>
       ) : null}
     </div>
@@ -43,8 +29,7 @@ export function InteractionPromptContent({ active, target }: InteractionPromptCo
 export function InteractionPrompt() {
   const activeTargetId = useWorldStore((state) => state.activeInteractionTargetId);
   const targetId = useWorldStore((state) => state.interactionTargetId);
-  const visibleTargetId = activeTargetId ?? targetId;
-  const target = visibleTargetId ? INTERACTION_TARGET_BY_ID[visibleTargetId] : null;
+  const target = !activeTargetId && targetId ? INTERACTION_TARGET_BY_ID[targetId] : null;
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -75,5 +60,5 @@ export function InteractionPrompt() {
     };
   }, []);
 
-  return <InteractionPromptContent active={Boolean(activeTargetId)} target={target} />;
+  return <InteractionPromptContent target={target} />;
 }
