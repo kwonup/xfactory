@@ -2,6 +2,30 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 07] — Arrow-key movement
+
+### Added
+
+- 방향키 입력을 World 축 기반 Player 이동으로 연결했다.
+- frame delta를 사용하는 일정한 이동 속도와 diagonal 방향 정규화를 적용했다.
+- 최단 각도 보간으로 Player가 이동 방향을 부드럽게 바라보도록 구현했다.
+- 이동 중 Walk, 정지 중 Idle animation이 자동으로 선택되도록 연결했다.
+- input, textarea, select, button과 editable role에서는 이동 입력을 무시한다.
+- 3D 화면에서 방향키가 브라우저 기본 동작을 일으키지 않도록 처리했다.
+- Window focus를 잃으면 눌린 키 상태를 초기화한다.
+
+### Tests
+
+- 방향키와 World 방향 mapping
+- Diagonal 속도 정규화와 반대 방향 상쇄
+- 최단 각도 회전 보간
+- Form 및 contenteditable 입력 예외
+
+### Notes
+
+- Camera는 현재 static이며 다음 Commit에서 Player 추적으로 전환한다.
+- World boundary와 구조물 collision은 Commit 10 범위다.
+
 ## [Commit 06] — Stylized player
 
 ### Added

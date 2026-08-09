@@ -105,3 +105,16 @@ Codex는 구현과 검증 후 한국어 Conventional Commit 메시지만 추천�
 ### 이유
 
 이미 프로젝트 작업 흐름에서 사용 중이며 문서 이동으로 얻는 이점보다 링크와 이력의 혼란이 크다.
+
+## ADR-009 — 방향키 이동은 World 축과 ref 기반 입력을 사용한다
+
+- 상태: Accepted
+- 결정일: 2026-08-09
+
+### 결정
+
+`ArrowUp/Down`은 World의 `-Z/+Z`, `ArrowLeft/Right`는 `-X/+X`로 이동한다. 동시 입력은 정규화하고, 눌린 키와 매 프레임 위치는 React state가 아닌 ref로 관리한다.
+
+### 이유
+
+현재 overview camera와 다음 elevated follow camera에서 예측 가능한 조작 방향을 유지할 수 있다. 매 frame React render 없이 이동과 animation을 갱신하여 3D Scene 성능도 안정적으로 유지한다.

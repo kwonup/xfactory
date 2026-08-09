@@ -70,9 +70,9 @@
 |---|---|---|---:|---|---|
 | PL-01 | Stylized Player | Spawn 위치에 친근한 Player 표시 | 06 | DONE | Code geometry avatar, browser visual check |
 | PL-02 | Idle/Walk fallback | Animation 누락 시에도 Scene 유지 | 06 | DONE | Procedural states, fallback unit tests |
-| PL-03 | 방향키 이동 | 앞·뒤·좌·우 이동이 delta 기반으로 동작 | 07 | TODO | — |
-| PL-04 | 회전 보간 | Player가 이동 방향을 부드럽게 바라봄 | 07 | TODO | — |
-| PL-05 | 입력 예외 | 폼 포커스 중 이동하지 않고 스크롤 방지 | 07 | TODO | — |
+| PL-03 | 방향키 이동 | 앞·뒤·좌·우 이동이 delta 기반으로 동작 | 07 | DONE | Direction unit tests, browser key input check |
+| PL-04 | 회전 보간 | Player가 이동 방향을 부드럽게 바라봄 | 07 | DONE | Shortest-angle test, browser visual check |
+| PL-05 | 입력 예외 | 폼 포커스 중 이동하지 않고 스크롤 방지 | 07 | DONE | Editable target tests, key event guard |
 | PL-06 | Elevated follow camera | 높은 위치에서 Player를 부드럽게 추적 | 08 | TODO | — |
 | PL-07 | Camera 안정성 | 과도한 회전·흔들림 없이 주변 공간 표시 | 08 | TODO | — |
 | PL-08 | World boundary | Player가 공장 단지 밖으로 나가지 않음 | 10 | TODO | — |

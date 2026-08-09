@@ -117,7 +117,7 @@ apps/api/app
 - spawn 위치
 - Idle/Walk animation 연결과 안전한 fallback
 
-### Commit 07 — Arrow-key movement
+### Commit 07 — Arrow-key movement · 완료
 
 - 방향키 입력과 delta 기반 이동
 - 이동 방향 회전 보간

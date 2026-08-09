@@ -22,10 +22,10 @@ describe("OnboardingPage", () => {
     const markup = renderToStaticMarkup(<OnboardingPage />);
 
     expect(markup).toContain("OUTDOOR FACTORY");
-    expect(markup).toContain("OUTDOOR FOUNDATION / ACTIVE");
+    expect(markup).toContain("PLAYER MOVEMENT / ACTIVE");
     expect(markup).toContain("INITIALIZING 3D SCENE");
     expect(markup).toContain("CAMERA");
-    expect(markup).toContain("WORLD");
+    expect(markup).toContain("ARROW KEYS");
     expect(markup).toContain('href="/"');
   });
 });

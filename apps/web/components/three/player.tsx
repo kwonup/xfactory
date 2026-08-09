@@ -2,9 +2,11 @@
 
 import { useFrame } from "@react-three/fiber";
 import { useRef, type RefObject } from "react";
-import type { Group } from "three";
+import { Vector3, type Group } from "three";
 
 import { resolvePlayerAnimation } from "@/features/player/player-animation";
+import { dampAngle, writeMovementDirection } from "@/features/player/player-controls";
+import { usePlayerControls } from "@/hooks/use-player-controls";
 
 type Position = [number, number, number];
 
@@ -14,6 +16,9 @@ type PlayerProps = {
 };
 
 export const PLAYER_SPAWN_POSITION: Position = [0, 0.28, 3.35];
+
+const PLAYER_MOVE_SPEED = 3.2;
+const PLAYER_ROTATION_SMOOTHING = 11;
 
 function PlayerHead() {
   return (
@@ -115,9 +120,10 @@ export function Player({ animation: requestedAnimation, position = PLAYER_SPAWN_
   const rightArmRef = useRef<Group>(null);
   const leftLegRef = useRef<Group>(null);
   const rightLegRef = useRef<Group>(null);
-  const animation = resolvePlayerAnimation(requestedAnimation);
+  const movementDirectionRef = useRef(new Vector3());
+  const controlsRef = usePlayerControls();
 
-  useFrame(({ clock }) => {
+  useFrame(({ clock }, delta) => {
     const player = playerRef.current;
     const leftArm = leftArmRef.current;
     const rightArm = rightArmRef.current;
@@ -129,6 +135,28 @@ export function Player({ animation: requestedAnimation, position = PLAYER_SPAWN_
     }
 
     const elapsed = clock.elapsedTime;
+    const movementDirection = movementDirectionRef.current;
+    const isMoving = writeMovementDirection(controlsRef.current, movementDirection);
+
+    if (isMoving) {
+      player.position.x += movementDirection.x * PLAYER_MOVE_SPEED * delta;
+      player.position.z += movementDirection.z * PLAYER_MOVE_SPEED * delta;
+
+      const targetRotation = Math.atan2(movementDirection.x, movementDirection.z);
+      player.rotation.y = dampAngle(
+        player.rotation.y,
+        targetRotation,
+        PLAYER_ROTATION_SMOOTHING,
+        delta,
+      );
+    }
+
+    const animation =
+      requestedAnimation === undefined
+        ? isMoving
+          ? "walk"
+          : "idle"
+        : resolvePlayerAnimation(requestedAnimation);
 
     if (animation === "walk") {
       const stride = Math.sin(elapsed * 8);
