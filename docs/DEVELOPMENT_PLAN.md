@@ -165,7 +165,7 @@ apps/api/app
 - 완료, 중복 방지, progress 계산
 - Zustand state
 
-### Commit 14 — Mission HUD
+### Commit 14 — Mission HUD · 완료
 
 - 현재·완료·대기 Mission
 - Progress bar

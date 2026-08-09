@@ -22,11 +22,13 @@ describe("OnboardingPage", () => {
     const markup = renderToStaticMarkup(<OnboardingPage />);
 
     expect(markup).toContain("OUTDOOR FACTORY");
-    expect(markup).toContain("MISSION STATE / ACTIVE");
+    expect(markup).toContain("MISSION HUD / ACTIVE");
     expect(markup).toContain("INITIALIZING 3D SCENE");
     expect(markup).toContain("CURRENT ZONE");
-    expect(markup).toContain("4 CONFIGURED");
-    expect(markup).toContain("MISSION LOGIC");
+    expect(markup).toContain("MISSION STATUS");
+    expect(markup).toContain('aria-valuenow="0"');
+    expect(markup).toContain("ARROW KEYS");
+    expect(markup).toContain("LIVE MISSION PROGRESS");
     expect(markup).toContain('aria-live="polite"');
     expect(markup).toContain('href="/"');
   });

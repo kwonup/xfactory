@@ -187,3 +187,16 @@ Mission 정의와 event mapping은 정적 데이터로 관리하고, Zustand Sto
 ### 이유
 
 현재 Mission, 완료 수, 백분율을 독립적으로 수정하면 상태가 엇갈릴 수 있다. 최소 상태와 순수 파생 함수를 사용하면 중복 완료를 방지하고 후속 HUD와 persistence에서 하나의 원천만 참조할 수 있다.
+
+## ADR-015 — Mission HUD는 Store 상태를 복제하지 않는다
+
+- 상태: Accepted
+- 결정일: 2026-08-09
+
+### 결정
+
+Mission HUD는 `completedMissionIds`를 구독하고 Mission 목록의 상태, 현재 목표, 완료 수와 백분율을 기존 순수 함수로 계산한다. HUD 전용 상태는 추가하지 않는다.
+
+### 이유
+
+표시용 상태를 Store에 다시 저장하면 완료 이벤트와 HUD가 엇갈릴 수 있다. 하나의 완료 ID 목록을 단일 원천으로 사용하면 추가 동기화 로직 없이 UI가 즉시 갱신된다.

@@ -24,6 +24,8 @@ export type MissionProgress = {
   totalCount: number;
 };
 
+export type MissionStatus = "completed" | "current" | "pending";
+
 export const MISSIONS: readonly MissionDefinition[] = [
   {
     completionEventId: "vision-display-reviewed",
@@ -89,4 +91,16 @@ export function isMissionCompleted(
   missionId: MissionId,
 ): boolean {
   return completedMissionIds.includes(missionId);
+}
+
+export function getMissionStatus(
+  missionId: MissionId,
+  currentMissionId: MissionId | null,
+  completedMissionIds: readonly MissionId[],
+): MissionStatus {
+  if (isMissionCompleted(completedMissionIds, missionId)) {
+    return "completed";
+  }
+
+  return missionId === currentMissionId ? "current" : "pending";
 }

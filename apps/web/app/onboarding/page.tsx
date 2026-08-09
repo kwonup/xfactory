@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CurrentZoneIndicator } from "@/components/onboarding/current-zone-indicator";
 import { InformationModal } from "@/components/onboarding/information-modal";
 import { InteractionPrompt } from "@/components/onboarding/interaction-prompt";
+import { MissionHud } from "@/components/onboarding/mission-hud";
 import { OnboardingExperience } from "@/components/three/onboarding-experience";
 
 export default function OnboardingPage() {
@@ -20,7 +21,7 @@ export default function OnboardingPage() {
 
         <div className="scene-stage">
           <span className="status-dot" aria-hidden="true" />
-          MISSION STATE / ACTIVE
+          MISSION HUD / ACTIVE
         </div>
       </header>
 
@@ -31,28 +32,29 @@ export default function OnboardingPage() {
       </section>
 
       <CurrentZoneIndicator />
+      <MissionHud />
       <InteractionPrompt />
       <InformationModal />
 
-      <aside className="scene-telemetry" aria-label="3D Scene 구성 정보">
+      <aside className="scene-telemetry" aria-label="조작 안내">
         <dl>
           <div>
-            <dt>MISSIONS</dt>
-            <dd>4 CONFIGURED</dd>
+            <dt>MOVE</dt>
+            <dd>ARROW KEYS</dd>
           </div>
           <div>
-            <dt>EVENTS</dt>
-            <dd>MAPPED</dd>
+            <dt>INTERACT</dt>
+            <dd>E KEY</dd>
           </div>
           <div>
-            <dt>PROGRESS</dt>
-            <dd>ZUSTAND</dd>
+            <dt>CLOSE</dt>
+            <dd>ESC</dd>
           </div>
         </dl>
       </aside>
 
       <p className="scene-foundation-note">
-        MISSION LOGIC
+        LIVE MISSION PROGRESS
         <span>ACTIVE</span>
       </p>
     </main>

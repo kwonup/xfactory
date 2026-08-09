@@ -586,6 +586,196 @@ a {
   letter-spacing: 0.04em;
 }
 
+.mission-hud {
+  position: absolute;
+  top: 7rem;
+  right: clamp(1.25rem, 3vw, 3.5rem);
+  z-index: 7;
+  width: min(22rem, calc(100% - 2.5rem));
+  border: 1px solid rgba(45, 77, 69, 0.15);
+  border-radius: 1rem;
+  background: rgba(248, 252, 248, 0.88);
+  padding: 1rem;
+  box-shadow: 0 1rem 2.5rem rgba(47, 78, 69, 0.12);
+  color: #29463f;
+  backdrop-filter: blur(14px);
+  pointer-events: none;
+}
+
+.mission-hud-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.mission-hud-header span,
+.mission-hud-header h2,
+.mission-hud-header > strong,
+.mission-current-objective span,
+.mission-list-item span,
+.mission-list-item strong,
+.mission-list-item small,
+.mission-progress span,
+.mission-progress strong {
+  font-family: "Courier New", monospace;
+}
+
+.mission-hud-header span,
+.mission-current-objective > span,
+.mission-progress span {
+  color: #698078;
+  font-size: 0.46rem;
+  letter-spacing: 0.13em;
+}
+
+.mission-hud-header h2 {
+  margin: 0.24rem 0 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+}
+
+.mission-hud-header > strong {
+  color: #3f8058;
+  font-size: 0.72rem;
+}
+
+.mission-current-objective {
+  margin-top: 0.85rem;
+  border-radius: 0.75rem;
+  background: #edf5ed;
+  padding: 0.8rem 0.85rem;
+}
+
+.mission-current-objective > strong {
+  display: block;
+  margin-top: 0.28rem;
+  color: #29463f;
+  font-size: 0.76rem;
+}
+
+.mission-current-objective p {
+  margin: 0.3rem 0 0;
+  color: #5d756e;
+  font-size: 0.62rem;
+  line-height: 1.45;
+}
+
+.mission-list {
+  display: grid;
+  gap: 0.42rem;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mission-list-item {
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2.55rem;
+  border: 1px solid transparent;
+  border-radius: 0.65rem;
+  padding: 0.45rem 0.55rem;
+}
+
+.mission-list-symbol {
+  display: grid;
+  width: 1.45rem;
+  height: 1.45rem;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(105, 128, 120, 0.11);
+  color: #71857e;
+  font-size: 0.67rem;
+}
+
+.mission-list-item div {
+  min-width: 0;
+}
+
+.mission-list-item div > span {
+  display: block;
+  color: #7a8b85;
+  font-size: 0.42rem;
+  letter-spacing: 0.1em;
+}
+
+.mission-list-item div > strong {
+  display: block;
+  overflow: hidden;
+  margin-top: 0.12rem;
+  color: #4d655e;
+  font-size: 0.58rem;
+  letter-spacing: 0.02em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mission-list-item > small {
+  color: #82918c;
+  font-size: 0.44rem;
+  white-space: nowrap;
+}
+
+.mission-list-item[data-state="current"] {
+  border-color: rgba(63, 128, 88, 0.2);
+  background: rgba(230, 243, 229, 0.8);
+}
+
+.mission-list-item[data-state="current"] .mission-list-symbol {
+  background: #3f8058;
+  color: #fff;
+}
+
+.mission-list-item[data-state="current"] div > strong,
+.mission-list-item[data-state="current"] > small {
+  color: #356c4a;
+}
+
+.mission-list-item[data-state="completed"] {
+  opacity: 0.72;
+}
+
+.mission-list-item[data-state="completed"] .mission-list-symbol {
+  background: #dcebdc;
+  color: #3f8058;
+}
+
+.mission-progress {
+  margin-top: 0.85rem;
+  border-top: 1px solid rgba(45, 77, 69, 0.1);
+  padding-top: 0.75rem;
+}
+
+.mission-progress > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mission-progress strong {
+  color: #3f8058;
+  font-size: 0.62rem;
+}
+
+.mission-progress-track {
+  height: 0.38rem;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #dce8dc;
+}
+
+.mission-progress-track > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #4f9f74, #79bd6e);
+  transition: width 320ms ease;
+}
+
 .interaction-prompt-slot {
   position: absolute;
   right: 0;
@@ -625,9 +815,6 @@ a {
 
 .interaction-prompt > span {
   font-family: "Courier New", monospace;
-}
-
-.interaction-prompt > span {
   font-size: 0.62rem;
   letter-spacing: 0.04em;
 }
@@ -1003,9 +1190,34 @@ a {
   }
 
   .current-zone-indicator {
-    top: 13.4rem;
-    left: 1.25rem;
-    min-width: 10.5rem;
+    top: 5.75rem;
+    right: 1rem;
+    left: 1rem;
+    min-width: 0;
+  }
+
+  .scene-intro {
+    display: none;
+  }
+
+  .mission-hud {
+    top: 10.7rem;
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+    max-height: 42svh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0.8rem;
+    pointer-events: auto;
+  }
+
+  .mission-current-objective {
+    display: none;
+  }
+
+  .mission-list {
+    gap: 0.25rem;
   }
 
   .scene-telemetry {

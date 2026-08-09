@@ -2,6 +2,26 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 14] — Mission HUD
+
+### Added
+
+- 현재 Mission 목표, 4개 Mission 목록, 완료 수와 진행률을 표시하는 DOM Mission HUD를 추가했다.
+- Mission별 상태를 `완료`, `진행 중`, `대기`의 텍스트·기호·색상으로 구분했다.
+- `aria-current="step"`과 0~100 범위의 `progressbar`를 적용해 현재 위치와 진행률을 의미적으로 표시했다.
+- 초기, 중간, 전체 완료 HUD와 상태 판정을 검증하는 회귀 테스트를 추가했다.
+
+### Changed
+
+- 기존 Current Zone Indicator를 유지하고 하단 Context HUD를 방향키, `E`, `ESC` 조작 안내로 전환했다.
+- 작은 화면에서는 설명 영역을 숨기고 Mission HUD를 스크롤 가능하게 조정했다.
+- Onboarding overlay에 Mission HUD와 실시간 진행 상태를 반영했다.
+
+### Notes
+
+- HUD는 Mission Store의 `completedMissionIds`만 구독하고 현재 Mission과 진행률을 render 시 파생한다.
+- Mission 진행을 localStorage에 저장하는 기능은 Commit 26의 범위다.
+
 ## [Commit 13] — Mission state
 
 ### Added

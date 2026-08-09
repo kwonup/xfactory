@@ -6,6 +6,7 @@ import {
   MISSION_ID_BY_EVENT,
   getCurrentMissionId,
   getMissionProgress,
+  getMissionStatus,
   isMissionCompleted,
 } from "@/features/mission/missions";
 import { useMissionStore } from "@/stores/mission-store";
@@ -37,6 +38,21 @@ describe("mission definitions", () => {
       "explore-smart-factory",
     );
     expect(getCurrentMissionId(MISSIONS.map((mission) => mission.id))).toBeNull();
+  });
+
+  it("distinguishes completed, current and pending states", () => {
+    const completedMissionIds = ["discover-interx"] as const;
+    const currentMissionId = getCurrentMissionId(completedMissionIds);
+
+    expect(getMissionStatus("discover-interx", currentMissionId, completedMissionIds)).toBe(
+      "completed",
+    );
+    expect(getMissionStatus("explore-smart-factory", currentMissionId, completedMissionIds)).toBe(
+      "current",
+    );
+    expect(getMissionStatus("understand-ai-sdm", currentMissionId, completedMissionIds)).toBe(
+      "pending",
+    );
   });
 });
 
