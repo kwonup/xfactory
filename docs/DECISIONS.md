@@ -131,3 +131,16 @@ Camera는 Player 위치를 부드럽게 추적하지만 Player 회전에 맞춰 
 ### 이유
 
 작은 디오라마형 공장의 방향성을 일관되게 유지하고, 방향 전환 때마다 배경이 회전해 발생하는 멀미와 시각적 혼란을 줄일 수 있다. World 축 기반 방향키 조작과도 자연스럽게 연결된다.
+
+## ADR-011 — Zone 단계에서 최소 Zustand World Store를 도입한다
+
+- 상태: Accepted
+- 결정일: 2026-08-09
+
+### 결정
+
+Zustand 5를 직접 dependency로 추가하고 Store에는 `currentZone`과 setter만 둔다. Player Zone Tracker가 bounds 결과가 달라질 때만 Store를 갱신하고 DOM Indicator가 이를 구독한다.
+
+### 이유
+
+Canvas 내부 Player 위치와 Canvas 밖 HUD, 이후 Chat/RAG Context가 동일한 Zone 상태를 공유해야 한다. 현재 필요한 필드만 추가하면 React Context 연결을 반복하지 않으면서 다음 기능을 미리 구현하지 않을 수 있다.

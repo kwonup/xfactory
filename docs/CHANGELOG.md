@@ -2,6 +2,27 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 09] — Factory zones
+
+### Added
+
+- Welcome Plaza, Company Vision Lab, Smart Factory, AI / SDM Lab, Core Value Park와 IX Area를 compact factory floor에 배치했다.
+- Company/AI 연구동, open factory canopy, Robot Arm, Conveyor, 4개 Value Station과 IX Garden을 code geometry로 구성했다.
+- 여섯 Zone의 ID, title, accent, bounds를 가진 명시적인 데이터 모델을 추가했다.
+- Player 위치를 매 frame 확인하되 Zone이 바뀔 때만 Store를 갱신하는 tracker를 추가했다.
+- 현재 위치를 표시하는 DOM `Current Zone` Indicator를 추가했다.
+- Zone 개수, ID 중복, bounds 비중첩, spawn 감지와 Store 동작 테스트를 추가했다.
+
+### Dependencies
+
+- `zustand@^5.0.14`: `currentZone`을 3D Scene과 DOM UI, 이후 RAG Context가 공유하기 위한 최소 World Store
+
+### Notes
+
+- Store에는 현재 `currentZone`만 포함하며 Mission과 Chat 상태는 아직 추가하지 않았다.
+- 건물과 설비 collision, 근접 Interaction, Mission 완료 로직은 이후 Commit 범위다.
+- 모든 Zone 시각 요소는 내부 geometry와 material만 사용하며 외부 Asset은 없다.
+
 ## [Commit 08] — Elevated follow camera
 
 ### Added

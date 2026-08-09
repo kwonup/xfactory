@@ -2,8 +2,10 @@ import { useRef } from "react";
 import type { Group } from "three";
 
 import { FactoryEnvironment } from "./factory-environment";
+import { FactoryZones } from "./factory-zones";
 import { Player } from "./player";
 import { PlayerFollowCamera } from "./player-follow-camera";
+import { PlayerZoneTracker } from "./player-zone-tracker";
 
 export function FactoryScene() {
   const playerRef = useRef<Group>(null);
@@ -30,8 +32,10 @@ export function FactoryScene() {
       />
 
       <FactoryEnvironment />
+      <FactoryZones />
       <Player playerRef={playerRef} />
       <PlayerFollowCamera targetRef={playerRef} />
+      <PlayerZoneTracker targetRef={playerRef} />
     </>
   );
 }

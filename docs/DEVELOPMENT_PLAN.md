@@ -130,7 +130,7 @@ apps/api/app
 - 부드러운 position/look-at 보간
 - FOV, offset, 회전 범위 조정
 
-### Commit 09 — Factory zones
+### Commit 09 — Factory zones · 완료
 
 - Welcome Plaza
 - Company Vision Lab

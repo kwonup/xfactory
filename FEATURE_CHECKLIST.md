@@ -57,12 +57,12 @@
 | 3D-04 | 밝은 야외 지형 | 잔디, 공장 바닥, 도로와 보행로 구성 | 05 | DONE | Frontend quality gate, browser screenshot |
 | 3D-05 | 소규모 World 경계 | 전체 구조가 밀집되고 장거리 빈 공간이 없음 | 05 | DONE | 34×30 island와 compact road loop 확인 |
 | 3D-06 | 야외 조명과 색감 | 밝고 부드러운 low-poly 분위기 구현 | 05 | DONE | Daylight scene과 low-poly nature 시각 확인 |
-| 3D-07 | Welcome Plaza | Spawn과 첫 조작 안내 공간 구분 | 09 | TODO | — |
-| 3D-08 | Company Vision Lab | 작은 연구동과 Vision Display 배치 | 09 | TODO | — |
-| 3D-09 | Smart Factory | Robot, Conveyor, Vision 설비 배치 | 09 | TODO | — |
-| 3D-10 | AI / SDM Lab | Data-AI-Factory 흐름 시각화 | 09 | TODO | — |
-| 3D-11 | Core Value Park | 4개 Station 배치 공간 구성 | 09 | TODO | — |
-| 3D-12 | IX Area | IX를 위한 친근한 휴식 공간 구성 | 09 | TODO | — |
+| 3D-07 | Welcome Plaza | Spawn과 첫 조작 안내 공간 구분 | 09 | DONE | Plaza ring, welcome board, browser check |
+| 3D-08 | Company Vision Lab | 작은 연구동과 Vision Display 배치 | 09 | DONE | Code geometry lab, browser check |
+| 3D-09 | Smart Factory | Robot, Conveyor, Vision 설비 배치 | 09 | DONE | Open canopy, robot arm, conveyor |
+| 3D-10 | AI / SDM Lab | Data-AI-Factory 흐름 시각화 | 09 | DONE | Stylized lab and signal object |
+| 3D-11 | Core Value Park | 4개 Station 배치 공간 구성 | 09 | DONE | Four colored station markers |
+| 3D-12 | IX Area | IX를 위한 친근한 휴식 공간 구성 | 09 | DONE | Garden ring, bench, IX pedestal |
 
 ## 5. Player, Movement, Camera, Collision
 
@@ -82,8 +82,8 @@
 
 | ID | 필수 기능 | 완료 조건 | Commit | 상태 | 검증 증거 |
 |---|---|---|---:|---|---|
-| ZI-01 | Zone 데이터 모델 | 6개 Zone 타입과 bounds 정의 | 09 | TODO | — |
-| ZI-02 | 현재 Zone 감지 | Player 위치에 따라 current zone 변경 | 09 | TODO | — |
+| ZI-01 | Zone 데이터 모델 | 6개 Zone 타입과 bounds 정의 | 09 | DONE | Six non-overlapping bounds, unit tests |
+| ZI-02 | 현재 Zone 감지 | Player 위치에 따라 current zone 변경 | 09 | DONE | Zustand store, browser zone transition |
 | ZI-03 | Interaction Target | 공통 target 데이터 구조 사용 | 11 | TODO | — |
 | ZI-04 | 근접 판정 | radius 안에서만 활성화 | 11 | TODO | — |
 | ZI-05 | 최근접 대상 | 겹칠 때 가장 가까운 하나 선택 | 11 | TODO | — |

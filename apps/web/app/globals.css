@@ -553,6 +553,39 @@ a {
   font-size: 0.72rem;
 }
 
+.current-zone-indicator {
+  position: absolute;
+  top: 16.25rem;
+  left: clamp(1.25rem, 3vw, 3.5rem);
+  z-index: 6;
+  display: flex;
+  min-width: 12rem;
+  flex-direction: column;
+  gap: 0.4rem;
+  border: 1px solid rgba(45, 77, 69, 0.14);
+  background: rgba(248, 252, 248, 0.78);
+  padding: 0.72rem 0.85rem;
+  backdrop-filter: blur(12px);
+  pointer-events: none;
+}
+
+.current-zone-indicator span,
+.current-zone-indicator strong {
+  font-family: "Courier New", monospace;
+}
+
+.current-zone-indicator span {
+  color: #698078;
+  font-size: 0.48rem;
+  letter-spacing: 0.12em;
+}
+
+.current-zone-indicator strong {
+  color: #29463f;
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+}
+
 .scene-telemetry {
   position: absolute;
   right: clamp(1.25rem, 3vw, 3.5rem);
@@ -783,6 +816,12 @@ a {
 
   .scene-intro {
     top: 6.75rem;
+  }
+
+  .current-zone-indicator {
+    top: 13.4rem;
+    left: 1.25rem;
+    min-width: 10.5rem;
   }
 
   .scene-telemetry {

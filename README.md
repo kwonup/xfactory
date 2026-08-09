@@ -14,7 +14,8 @@ X-FACTORY는 `X-factor`와 `INTERX의 Factory`라는 두 가지 의미를 담은
 - 코드 기반 Stylized Player와 절차적 Idle/Walk fallback 구현 완료
 - 방향키 이동, 회전 보간과 Idle/Walk 자동 전환 구현 완료
 - 높은 Third Person Follow Camera와 부드러운 추적 구현 완료
-- Factory Zone, Mission, Core Value Quest, IX Chat, LangChain RAG는 이후 단계에서 구현
+- 여섯 개의 Factory Zone과 위치 기반 Current Zone 감지 구현 완료
+- Collision, Mission, Core Value Quest, IX Chat, LangChain RAG는 이후 단계에서 구현
 
 현재 3D Scene은 기반 지형 단계입니다. 소형 공장동과 각 온보딩 Zone은 이후 지정된 Commit에서 추가합니다.
 

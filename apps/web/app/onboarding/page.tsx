@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { CurrentZoneIndicator } from "@/components/onboarding/current-zone-indicator";
 import { OnboardingExperience } from "@/components/three/onboarding-experience";
 
 export default function OnboardingPage() {
@@ -17,35 +18,37 @@ export default function OnboardingPage() {
 
         <div className="scene-stage">
           <span className="status-dot" aria-hidden="true" />
-          FOLLOW CAMERA / ACTIVE
+          FACTORY ZONES / ACTIVE
         </div>
       </header>
 
       <section className="scene-intro" aria-labelledby="scene-title">
-        <p>ONBOARDING / CAMERA RIG</p>
+        <p>ONBOARDING / FACTORY ZONES</p>
         <h1 id="scene-title">OUTDOOR FACTORY</h1>
-        <span>카메라가 플레이어를 부드럽게 따라갑니다</span>
+        <span>여섯 개의 온보딩 공간을 탐색해보세요</span>
       </section>
+
+      <CurrentZoneIndicator />
 
       <aside className="scene-telemetry" aria-label="3D Scene 구성 정보">
         <dl>
           <div>
-            <dt>PLAYER</dt>
-            <dd>TRACKED</dd>
+            <dt>ZONES</dt>
+            <dd>6 ACTIVE</dd>
           </div>
           <div>
-            <dt>HEIGHT</dt>
-            <dd>ELEVATED</dd>
+            <dt>STATE</dt>
+            <dd>POSITION AWARE</dd>
           </div>
           <div>
-            <dt>CAMERA</dt>
-            <dd>ROTATION LOCKED</dd>
+            <dt>MOVE</dt>
+            <dd>ARROW KEYS</dd>
           </div>
         </dl>
       </aside>
 
       <p className="scene-foundation-note">
-        THIRD PERSON CAMERA
+        COMPACT FACTORY WORLD
         <span>ACTIVE</span>
       </p>
     </main>
