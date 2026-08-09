@@ -40,10 +40,10 @@
 
 | ID | 필수 기능 | 완료 조건 | 예정 Commit | 상태 | 검증 증거 |
 |---|---|---|---:|---|---|
-| 3D-01 | React Three Fiber Canvas | `/onboarding`에 3D Scene이 안정적으로 표시됨 | 03 | TODO | — |
-| 3D-02 | 기본 Camera와 Light | Scene과 오브젝트를 식별할 수 있음 | 03 | TODO | — |
-| 3D-03 | Ground와 FactoryScene | 탐색 가능한 최소 공간이 렌더링됨 | 03 | TODO | — |
-| 3D-04 | Canvas 로딩 fallback | 3D 로딩 중 사용자에게 상태가 표시됨 | 03 | TODO | — |
+| 3D-01 | React Three Fiber Canvas | `/onboarding`에 3D Scene이 안정적으로 표시됨 | 03 | DONE | Build/render test PASS, user browser WebGL confirmation |
+| 3D-02 | 기본 Camera와 Light | Scene과 오브젝트를 식별할 수 있음 | 03 | DONE | Typecheck/build PASS, user visual confirmation |
+| 3D-03 | Ground와 FactoryScene | 탐색 가능한 최소 공간이 렌더링됨 | 03 | DONE | Typecheck/build PASS, user visual confirmation |
+| 3D-04 | Canvas 로딩 fallback | 3D 로딩 중 사용자에게 상태가 표시됨 | 03 | DONE | OnboardingPage loading fallback render test |
 | 3D-05 | Factory Environment | 공장으로 인지 가능한 저용량 환경이 구성됨 | 04 | TODO | — |
 | 3D-06 | 주요 공간 시각 구분 | Company, Smart Factory, AI/SDM, IX Area가 구분됨 | 04 | TODO | — |
 | 3D-07 | 3D Asset 라이선스 기록 | 모든 외부 Asset의 출처·저자·라이선스가 `docs/assets.md`에 기록됨 | 04 | TODO | — |

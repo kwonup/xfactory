@@ -18,11 +18,14 @@ describe("HomePage", () => {
 });
 
 describe("OnboardingPage", () => {
-  it("renders the connected gateway placeholder", () => {
+  it("renders the 3D scene shell and loading fallback", () => {
     const markup = renderToStaticMarkup(<OnboardingPage />);
 
-    expect(markup).toContain("FACTORY GATEWAY CONNECTED");
-    expect(markup).toContain("3D 공장 경험은 다음 단계에서 연결됩니다.");
+    expect(markup).toContain("FACTORY ACCESS");
+    expect(markup).toContain("SCENE FOUNDATION / ACTIVE");
+    expect(markup).toContain("INITIALIZING 3D SCENE");
+    expect(markup).toContain("CAMERA");
+    expect(markup).toContain("GROUND");
     expect(markup).toContain('href="/"');
   });
 });

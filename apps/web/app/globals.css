@@ -116,8 +116,7 @@ a {
   transform: rotate(45deg);
 }
 
-.brand-mark > span,
-.gateway-symbol > span {
+.brand-mark > span {
   transform: rotate(-45deg);
 }
 
@@ -291,7 +290,7 @@ a {
 }
 
 .enter-factory-button:focus-visible,
-.gateway-back-link:focus-visible {
+.scene-brand:focus-visible {
   outline: 2px solid var(--text);
   outline-offset: 4px;
 }
@@ -456,67 +455,219 @@ a {
   color: #768078;
 }
 
-.gateway-page {
+.onboarding-page {
   position: relative;
-  display: grid;
+  min-height: 100vh;
   min-height: 100svh;
-  place-items: center;
   overflow: hidden;
-  padding: 1.5rem;
-  background: #050706;
+  background: #060a07;
 }
 
-.gateway-panel {
-  position: relative;
-  width: min(100%, 42rem);
-  border: 1px solid rgba(199, 255, 45, 0.2);
-  background: rgba(8, 12, 9, 0.9);
-  padding: clamp(2rem, 6vw, 5rem);
-  text-align: center;
-  box-shadow: 0 0 80px rgba(199, 255, 45, 0.05);
+.onboarding-canvas-shell {
+  position: absolute;
+  inset: 0;
 }
 
-.gateway-index {
-  margin: 0 0 2rem;
-  color: var(--accent);
-  font-family: "Courier New", monospace;
-  font-size: 0.65rem;
+.onboarding-canvas-shell canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.scene-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  min-height: 5.25rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-inline: clamp(1.25rem, 3vw, 3.5rem);
+  background: linear-gradient(to bottom, rgba(3, 7, 4, 0.86), rgba(3, 7, 4, 0));
+  pointer-events: none;
+}
+
+.scene-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 800;
   letter-spacing: 0.18em;
+  pointer-events: auto;
 }
 
-.gateway-symbol {
+.scene-brand-mark {
   display: grid;
-  width: 4rem;
-  height: 4rem;
-  margin: 0 auto 2.25rem;
+  width: 2rem;
+  height: 2rem;
   place-items: center;
   border: 1px solid var(--accent);
   color: var(--accent);
-  font-size: 0.8rem;
-  font-weight: 800;
-  transform: rotate(45deg);
+  font-size: 0.6rem;
+  letter-spacing: 0;
 }
 
-.gateway-panel h1 {
-  margin: 0;
-  font-size: clamp(1.7rem, 5vw, 3rem);
-  letter-spacing: -0.04em;
+.scene-stage {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #8e9991;
+  font-family: "Courier New", monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.13em;
 }
 
-.gateway-panel > p:not(.gateway-index) {
-  margin: 1.5rem 0 2.25rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.8;
-  word-break: keep-all;
+.scene-intro {
+  position: absolute;
+  top: 8rem;
+  left: clamp(1.25rem, 3vw, 3.5rem);
+  z-index: 5;
+  pointer-events: none;
 }
 
-.gateway-back-link {
+.scene-intro p {
+  margin: 0 0 0.6rem;
   color: var(--accent);
   font-family: "Courier New", monospace;
+  font-size: 0.57rem;
+  letter-spacing: 0.16em;
+}
+
+.scene-intro h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.7rem);
+  letter-spacing: -0.055em;
+}
+
+.scene-intro > span {
+  display: block;
+  margin-top: 0.7rem;
+  color: #859087;
   font-size: 0.72rem;
-  font-weight: 700;
+}
+
+.scene-telemetry {
+  position: absolute;
+  right: clamp(1.25rem, 3vw, 3.5rem);
+  bottom: 2rem;
+  z-index: 5;
+  width: min(22rem, calc(100% - 2.5rem));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(5, 9, 6, 0.72);
+  backdrop-filter: blur(12px);
+}
+
+.scene-telemetry dl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+}
+
+.scene-telemetry dl > div {
+  min-width: 0;
+  padding: 0.9rem 1rem;
+}
+
+.scene-telemetry dl > div + div {
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.scene-telemetry dt,
+.scene-telemetry dd {
+  overflow: hidden;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Courier New", monospace;
+}
+
+.scene-telemetry dt {
+  margin-bottom: 0.35rem;
+  color: #68726b;
+  font-size: 0.48rem;
   letter-spacing: 0.12em;
+}
+
+.scene-telemetry dd {
+  color: #c4ccc6;
+  font-size: 0.58rem;
+  letter-spacing: 0.06em;
+}
+
+.scene-foundation-note {
+  position: absolute;
+  bottom: 2.3rem;
+  left: clamp(1.25rem, 3vw, 3.5rem);
+  z-index: 5;
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+  margin: 0;
+  color: #68726b;
+  font-family: "Courier New", monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  pointer-events: none;
+}
+
+.scene-foundation-note span {
+  border: 1px solid rgba(199, 255, 45, 0.24);
+  padding: 0.35rem 0.45rem;
+  color: var(--accent);
+}
+
+.canvas-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.1rem;
+  background: #060a07;
+  color: #9ba59d;
+  font-family: "Courier New", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+}
+
+.canvas-loader-ring {
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid rgba(199, 255, 45, 0.2);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: loader-spin 900ms linear infinite;
+}
+
+.canvas-loader-compact {
+  position: static;
+  min-width: 11rem;
+  min-height: 5rem;
+  background: rgba(4, 8, 5, 0.82);
+}
+
+.scene-asset-loader {
+  border: 1px solid rgba(199, 255, 45, 0.25);
+  background: rgba(4, 8, 5, 0.9);
+  padding: 0.7rem 0.9rem;
+  color: var(--accent);
+  font-family: "Courier New", monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.13em;
+  white-space: nowrap;
+}
+
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes status-pulse {
@@ -621,6 +772,26 @@ a {
 
   .landing-footer p:not(:first-child) {
     display: none;
+  }
+
+  .scene-stage,
+  .scene-foundation-note {
+    display: none;
+  }
+
+  .scene-intro {
+    top: 6.75rem;
+  }
+
+  .scene-telemetry {
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    width: auto;
+  }
+
+  .scene-telemetry dl > div {
+    padding-inline: 0.7rem;
   }
 }
 
