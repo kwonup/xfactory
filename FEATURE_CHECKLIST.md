@@ -75,8 +75,8 @@
 | PL-05 | 입력 예외 | 폼 포커스 중 이동하지 않고 스크롤 방지 | 07 | DONE | Editable target tests, key event guard |
 | PL-06 | Elevated follow camera | 높은 위치에서 Player를 부드럽게 추적 | 08 | DONE | Smoothing tests, browser movement check |
 | PL-07 | Camera 안정성 | 과도한 회전·흔들림 없이 주변 공간 표시 | 08 | DONE | Fixed orientation, before/after screenshots |
-| PL-08 | World boundary | Player가 공장 단지 밖으로 나가지 않음 | 10 | TODO | — |
-| PL-09 | 구조물 충돌 | 건물과 주요 설비를 통과하지 않음 | 10 | TODO | — |
+| PL-08 | World boundary | Player가 공장 단지 밖으로 나가지 않음 | 10 | DONE | Boundary clamp unit test, frontend quality gate |
+| PL-09 | 구조물 충돌 | 건물과 주요 설비를 통과하지 않음 | 10 | DONE | Collider, tunneling, wall-slide unit tests |
 
 ## 6. Zones and Interaction
 

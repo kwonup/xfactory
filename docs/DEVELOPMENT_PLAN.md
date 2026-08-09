@@ -140,7 +140,7 @@ apps/api/app
 - IX Area
 - Zone data와 위치 감지
 
-### Commit 10 — World collision
+### Commit 10 — World collision · 완료
 
 - World boundary
 - 건물과 주요 설비 collider

@@ -67,6 +67,10 @@ World boundary와 건물·설비 충돌은 bounding box 또는 동등한 단순 
 
 MVP에는 중력, 점프, 복잡한 rigid body simulation이 필요하지 않다.
 
+### 구현 메모
+
+Commit 10에서 Player를 반경 `0.34`의 원형으로, 구조물을 World 좌표 기반 AABB로 표현했다. 충돌은 X/Z축을 나누어 해결해 벽면 이동을 허용하고, 이동 거리를 세부 step으로 나누어 설비 관통을 방지한다.
+
 ## ADR-006 — Python 3.13.15 기준을 유지한다
 
 - 상태: Accepted

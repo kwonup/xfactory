@@ -22,10 +22,11 @@ describe("OnboardingPage", () => {
     const markup = renderToStaticMarkup(<OnboardingPage />);
 
     expect(markup).toContain("OUTDOOR FACTORY");
-    expect(markup).toContain("FACTORY ZONES / ACTIVE");
+    expect(markup).toContain("WORLD COLLISION / ACTIVE");
     expect(markup).toContain("INITIALIZING 3D SCENE");
     expect(markup).toContain("CURRENT ZONE");
-    expect(markup).toContain("6 ACTIVE");
+    expect(markup).toContain("LIGHTWEIGHT");
+    expect(markup).toContain("AABB COLLIDERS");
     expect(markup).toContain('href="/"');
   });
 });

@@ -18,14 +18,14 @@ export default function OnboardingPage() {
 
         <div className="scene-stage">
           <span className="status-dot" aria-hidden="true" />
-          FACTORY ZONES / ACTIVE
+          WORLD COLLISION / ACTIVE
         </div>
       </header>
 
       <section className="scene-intro" aria-labelledby="scene-title">
-        <p>ONBOARDING / FACTORY ZONES</p>
+        <p>ONBOARDING / COLLISION</p>
         <h1 id="scene-title">OUTDOOR FACTORY</h1>
-        <span>여섯 개의 온보딩 공간을 탐색해보세요</span>
+        <span>공장 경계와 주요 구조물을 따라 안전하게 탐색해보세요</span>
       </section>
 
       <CurrentZoneIndicator />
@@ -33,22 +33,22 @@ export default function OnboardingPage() {
       <aside className="scene-telemetry" aria-label="3D Scene 구성 정보">
         <dl>
           <div>
-            <dt>ZONES</dt>
-            <dd>6 ACTIVE</dd>
+            <dt>BOUNDARY</dt>
+            <dd>LOCKED</dd>
           </div>
           <div>
-            <dt>STATE</dt>
-            <dd>POSITION AWARE</dd>
+            <dt>BUILDINGS</dt>
+            <dd>SOLID</dd>
           </div>
           <div>
-            <dt>MOVE</dt>
-            <dd>ARROW KEYS</dd>
+            <dt>PHYSICS</dt>
+            <dd>LIGHTWEIGHT</dd>
           </div>
         </dl>
       </aside>
 
       <p className="scene-foundation-note">
-        COMPACT FACTORY WORLD
+        AABB COLLIDERS
         <span>ACTIVE</span>
       </p>
     </main>

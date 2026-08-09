@@ -2,7 +2,7 @@
 
 Immersive AI Onboarding Experience
 
-X-FACTORY는 `X-factor`와 `INTERX의 Factory`라는 두 가지 의미를 담은 웹 기반 온보딩 프로토타입입니다. 신규 입사자가 작고 밝은 야외형 3D 스마트팩토리를 탐험하며 회사와 기술을 이해하고, Core Value Quest와 AI Onboarding Buddy `IX`를 경험하는 것을 목표로 합니다.
+X-FACTORY는 `X-factor`와 `INTERX의 Factory`라는 두 가지 의미를 담은 웹 기반 온보딩 프로토타입입니다. 신규 입사자가 야외형 3D 스마트팩토리를 탐험하며 회사와 기술을 이해하고, Core Value Quest와 AI Onboarding Buddy `IX`를 경험하는 것을 목표로 합니다.
 
 ## Current Status
 
@@ -94,7 +94,7 @@ curl http://localhost:8000/health
 예상 응답:
 
 ```json
-{"status":"ok"}
+{ "status": "ok" }
 ```
 
 Backend 검증 명령:

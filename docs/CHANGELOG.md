@@ -2,6 +2,25 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 10] — World collision
+
+### Added
+
+- Player를 수평면의 원형으로 단순화하고, 건물과 주요 설비에 정적 AABB collider를 추가했다.
+- 잔디 섬 안쪽에 World boundary를 설정해 Player 중심과 반경이 경계 밖으로 나가지 않도록 했다.
+- 한 frame의 이동을 작은 step으로 나누어 빠른 이동이 collider를 관통하는 현상을 방지했다.
+- World 경계, 접선, 관통 방지, 벽면 슬라이딩, 건물·컨베이어 차단 회귀 테스트를 추가했다.
+
+### Changed
+
+- X축과 Z축을 나누어 충돌을 해결해 Player가 장애물에 비스듬히 접근해도 벽면을 따라 자연스럽게 이동할 수 있게 했다.
+- Onboarding overlay에 World boundary, solid building, lightweight collider 상태를 반영했다.
+
+### Notes
+
+- 중력, 점프, rigid body simulation이 필요하지 않아 물리 엔진 dependency는 추가하지 않았다.
+- 자연물과 장식 표면은 이동 동선을 불필요하게 제한하지 않도록 collider에서 제외했다.
+
 ## [Commit 09] — Factory zones
 
 ### Added

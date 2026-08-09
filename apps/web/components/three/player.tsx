@@ -5,6 +5,7 @@ import { useRef, type RefObject } from "react";
 import { Vector3, type Group } from "three";
 
 import { resolvePlayerAnimation } from "@/features/player/player-animation";
+import { movePlayerWithCollisions } from "@/features/player/player-collision";
 import { PLAYER_SPAWN_POSITION, type PlayerPosition } from "@/features/player/player-config";
 import { dampAngle, writeMovementDirection } from "@/features/player/player-controls";
 import { usePlayerControls } from "@/hooks/use-player-controls";
@@ -142,8 +143,7 @@ export function Player({
     const isMoving = writeMovementDirection(controlsRef.current, movementDirection);
 
     if (isMoving) {
-      player.position.x += movementDirection.x * PLAYER_MOVE_SPEED * delta;
-      player.position.z += movementDirection.z * PLAYER_MOVE_SPEED * delta;
+      movePlayerWithCollisions(player.position, movementDirection, PLAYER_MOVE_SPEED * delta);
 
       const targetRotation = Math.atan2(movementDirection.x, movementDirection.z);
       player.rotation.y = dampAngle(
