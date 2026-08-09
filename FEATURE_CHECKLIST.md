@@ -105,9 +105,9 @@
 
 | ID | 필수 기능 | 완료 조건 | Commit | 상태 | 검증 증거 |
 |---|---|---|---:|---|---|
-| CV-01 | 12개 Core Value 데이터 | 공식 명칭과 설명 누락 없음 | 15 | TODO | — |
-| CV-02 | 4개 Cluster | Cluster마다 정확히 3개 Value | 15 | TODO | — |
-| CV-03 | 12개 Scenario | Value별 상황, 선택지, feedback, takeaway | 15 | TODO | — |
+| CV-01 | 12개 Core Value 데이터 | 공식 명칭과 설명 누락 없음 | 15 | DONE | Official source marker, order and full coverage unit tests |
+| CV-02 | 4개 Cluster | Cluster마다 정확히 3개 Value | 15 | DONE | Four-cluster partition and exact three-value membership tests |
+| CV-03 | 12개 Scenario | Value별 상황, 선택지, feedback, takeaway | 15 | DONE | One scenario per Value, three choices, feedback and takeaway tests |
 | CV-04 | 4개 Value Station | Station에서 3개 Micro Quest 실행 | 16 | TODO | — |
 | CV-05 | 설명형 피드백 | 점수 대신 선택과 기대 행동의 관계 설명 | 16 | TODO | — |
 | CV-06 | Value Passport | 12개 경험 여부와 진행률 표시 | 16 | TODO | — |

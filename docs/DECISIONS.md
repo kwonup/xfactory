@@ -200,3 +200,16 @@ Mission HUD는 `completedMissionIds`를 구독하고 Mission 목록의 상태, �
 ### 이유
 
 표시용 상태를 Store에 다시 저장하면 완료 이벤트와 HUD가 엇갈릴 수 있다. 하나의 완료 ID 목록을 단일 원천으로 사용하면 추가 동기화 로직 없이 UI가 즉시 갱신된다.
+
+## ADR-016 — Core Value 공식 원문과 UX 해석을 분리한다
+
+- 상태: Accepted
+- 결정일: 2026-08-09
+
+### 결정
+
+사용자 제공 핵심가치 명칭과 설명은 `core-values.ts`에서 `user-provided-official` 출처로 관리하고, 업무 상황과 선택 피드백은 `core-value-scenarios.ts`에서 `[DEMO DATA]`로 분리한다. 모든 Scenario는 `reflection-not-assessment` 학습 모드를 가지며 `recommended`를 설명 목적에만 사용한다.
+
+### 이유
+
+공식 문구와 제품을 위해 만든 사례를 같은 데이터로 취급하면 데모 해석이 INTERX의 공식 정책처럼 보일 수 있다. 출처와 목적을 타입 수준에서 구분하면 후속 Quest UI와 RAG가 콘텐츠의 성격을 명확히 표시하고, 점수·정답·합격 판정으로 확장되는 것을 예방할 수 있다.

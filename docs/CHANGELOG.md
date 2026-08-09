@@ -2,6 +2,26 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 15] — Core Value content model
+
+### Added
+
+- 사용자 제공 공식 자료의 12개 핵심가치 명칭과 설명을 순서·출처 상태와 함께 타입화했다.
+- 12개 Value를 정확히 3개씩 묶는 4개 Cluster 데이터와 ID 기반 조회 맵을 추가했다.
+- 각 Value마다 업무 상황, 3개 선택지, 설명형 피드백과 takeaway를 가진 온보딩 Scenario 12개를 추가했다.
+- 공식 데이터 전체성, Cluster 분할, Scenario 일대일 연결, 비평가 구조를 검증하는 단위 테스트를 추가했다.
+
+### Changed
+
+- Core Value 공식 원문과 UX용 Scenario 해석을 별도 모듈로 분리했다.
+- Core Value Quest의 콘텐츠 모델 완료 상태를 기능 체크리스트와 개발 계획에 반영했다.
+
+### Notes
+
+- 모든 Scenario는 `[DEMO DATA]`와 `reflection-not-assessment`로 표시하며 직원 평가 자료가 아니다.
+- `recommended`는 기대 행동과 핵심가치의 연결을 설명하는 속성일 뿐 점수, 정답, 합격 판정을 만들지 않는다.
+- 4개 Value Station, 진행 상태, Value Passport와 Reflection UI는 Commit 16의 범위다.
+
 ## [Commit 14] — Mission HUD
 
 ### Added

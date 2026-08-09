@@ -171,7 +171,7 @@ apps/api/app
 - Progress bar
 - 현재 Zone과 controls
 
-### Commit 15 — Core Value content model
+### Commit 15 — Core Value content model · 완료
 
 - 12개 Value와 4개 Cluster
 - 12개 Scenario, choices, feedback, takeaway
