@@ -9,10 +9,11 @@ X-FACTORY는 `X-factor`와 `INTERX의 Factory`라는 두 가지 의미를 담은
 - Next.js와 FastAPI 모노레포 기반 구성 완료
 - X-FACTORY Landing과 `/onboarding` route 구현 완료
 - React Three Fiber Canvas와 기본 loading fallback 구현 완료
-- 밝은 야외형 Smart Factory 방향과 단계별 개발 계획 확정
+- 밝은 잔디, 순환형 도로, 보행로와 공장 작업 바닥 구현 완료
+- 소규모 야외 World 경계와 low-poly 자연물 구현 완료
 - Player, Mission, Core Value Quest, IX Chat, LangChain RAG는 이후 단계에서 구현
 
-현재 작업 트리에 남아 있는 기존 실내 공장 Scene은 새 디자인의 완료 상태가 아닙니다. 다음 3D 단계에서 기존 Canvas와 geometry를 재사용해 밝은 야외 공장으로 전환합니다.
+현재 3D Scene은 기반 지형 단계입니다. 소형 공장동과 각 온보딩 Zone은 이후 지정된 Commit에서 추가합니다.
 
 ## Visual Direction
 

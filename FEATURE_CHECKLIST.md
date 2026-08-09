@@ -54,9 +54,9 @@
 | 3D-01 | React Three Fiber Canvas | `/onboarding`에 Scene 표시 | 03 | DONE | Build/render test, browser check |
 | 3D-02 | 기본 Camera와 Light | 기본 geometry를 식별할 수 있음 | 03 | DONE | Typecheck/build, browser check |
 | 3D-03 | Canvas loading fallback | 로딩 상태가 표시됨 | 03 | DONE | Render test |
-| 3D-04 | 밝은 야외 지형 | 잔디, 공장 바닥, 도로와 보행로 구성 | 05 | TODO | — |
-| 3D-05 | 소규모 World 경계 | 전체 구조가 밀집되고 장거리 빈 공간이 없음 | 05 | TODO | — |
-| 3D-06 | 야외 조명과 색감 | 밝고 부드러운 low-poly 분위기 구현 | 05 | TODO | — |
+| 3D-04 | 밝은 야외 지형 | 잔디, 공장 바닥, 도로와 보행로 구성 | 05 | DONE | Frontend quality gate, browser screenshot |
+| 3D-05 | 소규모 World 경계 | 전체 구조가 밀집되고 장거리 빈 공간이 없음 | 05 | DONE | 34×30 island와 compact road loop 확인 |
+| 3D-06 | 야외 조명과 색감 | 밝고 부드러운 low-poly 분위기 구현 | 05 | DONE | Daylight scene과 low-poly nature 시각 확인 |
 | 3D-07 | Welcome Plaza | Spawn과 첫 조작 안내 공간 구분 | 09 | TODO | — |
 | 3D-08 | Company Vision Lab | 작은 연구동과 Vision Display 배치 | 09 | TODO | — |
 | 3D-09 | Smart Factory | Robot, Conveyor, Vision 설비 배치 | 09 | TODO | — |

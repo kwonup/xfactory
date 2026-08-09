@@ -2,7 +2,23 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
-## [Unreleased]
+## [Commit 05] — Bright outdoor factory foundation
+
+### Changed
+
+- 어두운 실내 Factory Shell과 4개 임시 Area Platform을 제거했다.
+- 34×30 규모의 잔디 기반 위에 짧은 순환형 도로, 보행로와 공장 작업 바닥을 구성했다.
+- 밝은 하늘, 부드러운 daylight, 기본 shadow를 적용했다.
+- 낮은 경계 언덕과 최소한의 low-poly 나무·관목을 추가했다.
+- 전체 공장 기반을 한 화면에서 확인할 수 있도록 Camera와 FOV를 조정했다.
+- Onboarding overlay와 loading UI를 밝은 Scene에서 읽을 수 있는 색상으로 변경했다.
+
+### Notes
+
+- 외부 3D Asset이나 새 dependency는 추가하지 않았다.
+- Player, 건물, Zone 판정과 Interaction은 이후 Commit 범위로 남겼다.
+
+## [Commit 04] — Product direction documentation
 
 ### Changed
 

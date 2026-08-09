@@ -17,35 +17,35 @@ export default function OnboardingPage() {
 
         <div className="scene-stage">
           <span className="status-dot" aria-hidden="true" />
-          SCENE FOUNDATION / ACTIVE
+          OUTDOOR FOUNDATION / ACTIVE
         </div>
       </header>
 
       <section className="scene-intro" aria-labelledby="scene-title">
-        <p>ONBOARDING SPACE / 01</p>
-        <h1 id="scene-title">FACTORY ACCESS</h1>
-        <span>4개 온보딩 영역 준비 완료</span>
+        <p>SMART FACTORY / FOUNDATION</p>
+        <h1 id="scene-title">OUTDOOR FACTORY</h1>
+        <span>밝은 야외 공장 기반 조성 완료</span>
       </section>
 
       <aside className="scene-telemetry" aria-label="3D Scene 구성 정보">
         <dl>
           <div>
             <dt>CAMERA</dt>
-            <dd>PERSPECTIVE</dd>
+            <dd>OVERVIEW</dd>
           </div>
           <div>
             <dt>LIGHT</dt>
-            <dd>3 SOURCES</dd>
+            <dd>DAYLIGHT</dd>
           </div>
           <div>
-            <dt>GROUND</dt>
-            <dd>32 × 32</dd>
+            <dt>WORLD</dt>
+            <dd>COMPACT</dd>
           </div>
         </dl>
       </aside>
 
       <p className="scene-foundation-note">
-        FACTORY ENVIRONMENT
+        BRIGHT LOW-POLY TERRAIN
         <span>ACTIVE</span>
       </p>
     </main>

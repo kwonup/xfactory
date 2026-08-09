@@ -460,7 +460,7 @@ a {
   min-height: 100vh;
   min-height: 100svh;
   overflow: hidden;
-  background: #060a07;
+  background: #d9eef4;
 }
 
 .onboarding-canvas-shell {
@@ -485,9 +485,9 @@ a {
   min-height: 5.25rem;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(45, 77, 69, 0.12);
   padding-inline: clamp(1.25rem, 3vw, 3.5rem);
-  background: linear-gradient(to bottom, rgba(3, 7, 4, 0.86), rgba(3, 7, 4, 0));
+  background: linear-gradient(to bottom, rgba(249, 253, 250, 0.9), rgba(249, 253, 250, 0));
   pointer-events: none;
 }
 
@@ -498,6 +498,7 @@ a {
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.18em;
+  color: #25463f;
   pointer-events: auto;
 }
 
@@ -506,8 +507,8 @@ a {
   width: 2rem;
   height: 2rem;
   place-items: center;
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  border: 1px solid #4e9367;
+  color: #3f8058;
   font-size: 0.6rem;
   letter-spacing: 0;
 }
@@ -516,7 +517,7 @@ a {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  color: #8e9991;
+  color: #557168;
   font-family: "Courier New", monospace;
   font-size: 0.58rem;
   letter-spacing: 0.13em;
@@ -532,7 +533,7 @@ a {
 
 .scene-intro p {
   margin: 0 0 0.6rem;
-  color: var(--accent);
+  color: #3f8058;
   font-family: "Courier New", monospace;
   font-size: 0.57rem;
   letter-spacing: 0.16em;
@@ -540,6 +541,7 @@ a {
 
 .scene-intro h1 {
   margin: 0;
+  color: #213b35;
   font-size: clamp(1.6rem, 3vw, 2.7rem);
   letter-spacing: -0.055em;
 }
@@ -547,7 +549,7 @@ a {
 .scene-intro > span {
   display: block;
   margin-top: 0.7rem;
-  color: #859087;
+  color: #587269;
   font-size: 0.72rem;
 }
 
@@ -557,8 +559,8 @@ a {
   bottom: 2rem;
   z-index: 5;
   width: min(22rem, calc(100% - 2.5rem));
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(5, 9, 6, 0.72);
+  border: 1px solid rgba(45, 77, 69, 0.14);
+  background: rgba(248, 252, 248, 0.78);
   backdrop-filter: blur(12px);
 }
 
@@ -574,7 +576,7 @@ a {
 }
 
 .scene-telemetry dl > div + div {
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 1px solid rgba(45, 77, 69, 0.1);
 }
 
 .scene-telemetry dt,
@@ -588,13 +590,13 @@ a {
 
 .scene-telemetry dt {
   margin-bottom: 0.35rem;
-  color: #68726b;
+  color: #698078;
   font-size: 0.48rem;
   letter-spacing: 0.12em;
 }
 
 .scene-telemetry dd {
-  color: #c4ccc6;
+  color: #29463f;
   font-size: 0.58rem;
   letter-spacing: 0.06em;
 }
@@ -608,7 +610,7 @@ a {
   gap: 0.65rem;
   align-items: center;
   margin: 0;
-  color: #68726b;
+  color: #587269;
   font-family: "Courier New", monospace;
   font-size: 0.55rem;
   letter-spacing: 0.12em;
@@ -616,9 +618,9 @@ a {
 }
 
 .scene-foundation-note span {
-  border: 1px solid rgba(199, 255, 45, 0.24);
+  border: 1px solid rgba(63, 128, 88, 0.3);
   padding: 0.35rem 0.45rem;
-  color: var(--accent);
+  color: #3f8058;
 }
 
 .canvas-loader {
@@ -630,8 +632,8 @@ a {
   align-items: center;
   justify-content: center;
   gap: 1.1rem;
-  background: #060a07;
-  color: #9ba59d;
+  background: #d9eef4;
+  color: #49655d;
   font-family: "Courier New", monospace;
   font-size: 0.62rem;
   letter-spacing: 0.16em;
@@ -640,8 +642,8 @@ a {
 .canvas-loader-ring {
   width: 2.8rem;
   height: 2.8rem;
-  border: 1px solid rgba(199, 255, 45, 0.2);
-  border-top-color: var(--accent);
+  border: 1px solid rgba(63, 128, 88, 0.2);
+  border-top-color: #3f8058;
   border-radius: 50%;
   animation: loader-spin 900ms linear infinite;
 }
@@ -650,43 +652,18 @@ a {
   position: static;
   min-width: 11rem;
   min-height: 5rem;
-  background: rgba(4, 8, 5, 0.82);
+  background: rgba(248, 252, 248, 0.86);
 }
 
 .scene-asset-loader {
-  border: 1px solid rgba(199, 255, 45, 0.25);
-  background: rgba(4, 8, 5, 0.9);
+  border: 1px solid rgba(63, 128, 88, 0.25);
+  background: rgba(248, 252, 248, 0.92);
   padding: 0.7rem 0.9rem;
-  color: var(--accent);
+  color: #3f8058;
   font-family: "Courier New", monospace;
   font-size: 0.58rem;
   letter-spacing: 0.13em;
   white-space: nowrap;
-}
-
-.factory-area-label {
-  display: flex;
-  min-width: 8.5rem;
-  align-items: center;
-  gap: 0.65rem;
-  border: 1px solid;
-  background: rgba(5, 9, 6, 0.88);
-  padding: 0.55rem 0.7rem;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.38);
-  color: #eef5ef;
-  font-family: "Courier New", monospace;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
-.factory-area-label span {
-  font-size: 0.45rem;
-  letter-spacing: 0.09em;
-}
-
-.factory-area-label strong {
-  font-size: 0.56rem;
-  letter-spacing: 0.1em;
 }
 
 @keyframes loader-spin {

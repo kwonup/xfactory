@@ -19,9 +19,10 @@ function SceneLoadingFallback() {
 export default function FactoryCanvas() {
   return (
     <Canvas
-      camera={{ fov: 44, near: 0.1, far: 120, position: [14, 12, 18] }}
+      camera={{ fov: 40, near: 0.1, far: 100, position: [17, 15, 19] }}
       dpr={[1, 1.5]}
       gl={{ antialias: true, alpha: false, powerPreference: "high-performance" }}
+      shadows="basic"
     >
       <Suspense fallback={<SceneLoadingFallback />}>
         <FactoryScene />

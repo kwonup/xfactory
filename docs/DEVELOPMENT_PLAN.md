@@ -95,7 +95,7 @@ apps/api/app
 - 기본 Camera, Light, Ground
 - Suspense와 loading fallback
 
-### Commit 04 — Product direction documentation · 현재 단계
+### Commit 04 — Product direction documentation · 완료
 
 - 밝은 야외 Smart Factory 방향 확정
 - `AGENTS.md`와 Feature Checklist 갱신
@@ -103,7 +103,7 @@ apps/api/app
 - Core Value 공식 원문 분리
 - 코드와 dependency는 변경하지 않음
 
-### Commit 05 — Bright outdoor factory foundation
+### Commit 05 — Bright outdoor factory foundation · 완료
 
 - 밝은 sky/background와 부드러운 light
 - Grass, factory floor, 짧은 road와 sidewalk

@@ -21,11 +21,11 @@ describe("OnboardingPage", () => {
   it("renders the 3D scene shell and loading fallback", () => {
     const markup = renderToStaticMarkup(<OnboardingPage />);
 
-    expect(markup).toContain("FACTORY ACCESS");
-    expect(markup).toContain("SCENE FOUNDATION / ACTIVE");
+    expect(markup).toContain("OUTDOOR FACTORY");
+    expect(markup).toContain("OUTDOOR FOUNDATION / ACTIVE");
     expect(markup).toContain("INITIALIZING 3D SCENE");
     expect(markup).toContain("CAMERA");
-    expect(markup).toContain("GROUND");
+    expect(markup).toContain("WORLD");
     expect(markup).toContain('href="/"');
   });
 });
