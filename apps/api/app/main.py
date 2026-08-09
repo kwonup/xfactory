@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 
 app = FastAPI(
-    title="INTERX WORLD API",
-    description="Backend API for the INTERX WORLD onboarding experience.",
+    title="X-FACTORY API",
+    description="Backend API for the X-FACTORY onboarding experience.",
     version="0.1.0",
 )
 

@@ -213,6 +213,22 @@ a {
   text-shadow: 0 0 42px rgba(199, 255, 45, 0.08);
 }
 
+.brand-meaning {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 1.75rem 0 0 0.35rem;
+  color: #7f8982;
+  font-family: "Courier New", monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+}
+
+.brand-meaning span {
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+
 .hero-description {
   max-width: 34rem;
   margin: clamp(2rem, 4vh, 3rem) 0 0;
@@ -532,7 +548,8 @@ a {
   }
 
   .hero-eyebrow,
-  .hero-actions {
+  .hero-actions,
+  .brand-meaning {
     justify-content: center;
   }
 

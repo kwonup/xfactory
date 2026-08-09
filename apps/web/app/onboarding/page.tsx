@@ -11,7 +11,7 @@ export default function OnboardingPage() {
         </div>
         <h1>FACTORY GATEWAY CONNECTED</h1>
         <p>
-          INTERX WORLD 입장 경로가 준비되었습니다.
+          X-FACTORY 입장 경로가 준비되었습니다.
           <br />
           3D 공장 경험은 다음 단계에서 연결됩니다.
         </p>

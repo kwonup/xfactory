@@ -1,1 +1,1 @@
-"""INTERX WORLD API package."""
+"""X-FACTORY API package."""

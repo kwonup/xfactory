@@ -1,8 +1,8 @@
-# INTERX WORLD
+# X-FACTORY
 
 Immersive AI Onboarding Experience
 
-INTERX WORLD는 신규 입사자가 웹 브라우저의 3D 공장을 탐색하고, 미션형 온보딩과 AI Onboarding Buddy `IX`를 경험하는 프로토타입입니다.
+X-FACTORY는 `X-factor`와 `INTERX의 Factory`라는 두 가지 의미를 담은 프로젝트입니다. 신규 입사자가 웹 브라우저의 3D 공장을 탐색하고, 미션형 온보딩과 AI Onboarding Buddy `IX`를 경험하는 프로토타입입니다.
 
 현재 저장소는 Commit 01의 최소 Frontend/Backend 실행 환경만 포함합니다. 3D Scene, Mission, Core Value Quest, NPC, RAG는 이후 Commit Plan에 따라 한 단계씩 추가합니다.
 

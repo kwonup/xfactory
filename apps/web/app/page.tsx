@@ -8,11 +8,11 @@ export default function HomePage() {
       <div className="landing-glow landing-glow-right" aria-hidden="true" />
 
       <header className="landing-header">
-        <div className="brand-lockup" aria-label="INTERX WORLD">
+        <div className="brand-lockup" aria-label="X-FACTORY">
           <span className="brand-mark" aria-hidden="true">
             <span>IX</span>
           </span>
-          <span className="brand-name">INTERX WORLD</span>
+          <span className="brand-name">X-FACTORY</span>
         </div>
 
         <p className="system-status">
@@ -30,8 +30,12 @@ export default function HomePage() {
 
           <h1 className="hero-title">
             <span>WELCOME TO</span>
-            INTERX <strong>WORLD</strong>
+            X-<strong>FACTORY</strong>
           </h1>
+
+          <p className="brand-meaning">
+            X-FACTOR <span aria-hidden="true">×</span> INTERX FACTORY
+          </p>
 
           <p className="hero-description">
             AI와 제조가 만나는 공간을 직접 탐험하며
@@ -43,7 +47,7 @@ export default function HomePage() {
             <Link
               className="enter-factory-button"
               href="/onboarding"
-              aria-label="INTERX WORLD 3D 공장 입장"
+              aria-label="X-FACTORY 3D 공장 입장"
             >
               <span>ENTER FACTORY</span>
               <span className="button-arrow" aria-hidden="true">

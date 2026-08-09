@@ -1,4 +1,4 @@
-# INTERX WORLD — Codex Development Guide
+# X-FACTORY — Codex Development Guide
 
 > 프로젝트 목적: INTERX 신규 입사자가 웹 브라우저 안의 3D 공장을 직접 탐색하고, 미션형 온보딩을 수행하며, AI NPC에게 회사/기술/온보딩 관련 질문을 할 수 있는 **몰입형 생성형 AI 온보딩 포털 프로토타입**을 구현한다.
 
@@ -52,7 +52,9 @@ Codex는 아래 규칙을 반드시 지킨다.
 
 ## 프로젝트명
 
-**INTERX WORLD**
+**X-FACTORY**
+
+프로젝트명은 `X-factor`와 `INTERX의 Factory`라는 두 가지 의미를 담는다.
 
 부제:
 
@@ -74,7 +76,7 @@ Codex는 아래 규칙을 반드시 지킨다.
 
 ## 해결 방향
 
-INTERX WORLD에서는 신규 입사자가 수동적으로 문서를 읽는 대신:
+X-FACTORY에서는 신규 입사자가 수동적으로 문서를 읽는 대신:
 
 - 3D 공간을 탐색하고
 - 각 Zone에서 미션을 수행하고
@@ -89,7 +91,7 @@ INTERX WORLD에서는 신규 입사자가 수동적으로 문서를 읽는 대�
 프로젝트의 UX 컨셉은 다음과 같다.
 
 ```text
-WELCOME TO INTERX WORLD
+WELCOME TO X-FACTORY
           ↓
 ENTER FACTORY
           ↓
@@ -291,7 +293,7 @@ LangChain 사용 흔적만 남기기 위해 불필요한 wrapper를 추가하지
 가능하면 모노레포 형태로 구성한다.
 
 ```text
-interx-world/
+x-factory/
 ├── apps/
 │   ├── web/
 │   │   ├── app/
@@ -1262,7 +1264,7 @@ Landing의 목적은 설명이 아니라 **3D Experience로 진입시키는 것*
 예:
 
 ```text
-INTERX WORLD
+X-FACTORY
 
 Immersive AI Onboarding Experience
 
@@ -1588,7 +1590,7 @@ chore: initialize interx world workspace
 
 ### 목표
 
-INTERX WORLD의 진입 화면 구현.
+X-FACTORY의 진입 화면 구현.
 
 ### 작업
 

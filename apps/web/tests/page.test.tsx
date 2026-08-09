@@ -8,7 +8,9 @@ describe("HomePage", () => {
   it("renders the immersive project identity and factory entry link", () => {
     const markup = renderToStaticMarkup(<HomePage />);
 
-    expect(markup).toContain("INTERX WORLD");
+    expect(markup).toContain("X-FACTORY");
+    expect(markup).toContain("X-FACTOR");
+    expect(markup).toContain("INTERX FACTORY");
     expect(markup).toContain("AI와 제조가 만나는 공간");
     expect(markup).toContain("ENTER FACTORY");
     expect(markup).toContain('href="/onboarding"');

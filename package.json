@@ -1,5 +1,5 @@
 {
-  "name": "interx-world",
+  "name": "x-factory",
   "version": "0.1.0",
   "private": true,
   "packageManager": "npm@11.16.0",
@@ -7,11 +7,11 @@
     "apps/web"
   ],
   "scripts": {
-    "dev": "npm --workspace @interx-world/web run dev",
-    "build": "npm --workspace @interx-world/web run build",
-    "lint": "npm --workspace @interx-world/web run lint",
-    "typecheck": "npm --workspace @interx-world/web run typecheck",
-    "test": "npm --workspace @interx-world/web run test"
+    "dev": "npm --workspace @x-factory/web run dev",
+    "build": "npm --workspace @x-factory/web run build",
+    "lint": "npm --workspace @x-factory/web run lint",
+    "typecheck": "npm --workspace @x-factory/web run typecheck",
+    "test": "npm --workspace @x-factory/web run test"
   },
   "engines": {
     "node": ">=24 <25"

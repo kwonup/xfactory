@@ -1,4 +1,4 @@
-# INTERX WORLD — Feature Checklist
+# X-FACTORY — Feature Checklist
 
 > 이 문서는 반드시 구현해야 하는 기능의 진행 상태와 검증 증거를 추적한다.  
 > 상세 요구사항과 구현 원칙의 단일 원본은 [`AGENTS.md`](./AGENTS.md)다.
