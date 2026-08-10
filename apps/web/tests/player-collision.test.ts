@@ -94,6 +94,19 @@ describe("player collision movement", () => {
     expect(isPositionBlocked(conveyorApproach)).toBe(false);
   });
 
+  it("blocks the factory back wall and pallet load without closing the work path", () => {
+    const backWallApproach = { x: 5.9, z: -4 };
+    const palletApproach = { x: 6, z: -3.42 };
+
+    movePlayerWithCollisions(backWallApproach, { x: 0, z: -1 }, 2);
+    movePlayerWithCollisions(palletApproach, { x: 1, z: 0 }, 2);
+
+    expect(backWallApproach.z).toBeGreaterThanOrEqual(-4.5 + PLAYER_COLLISION_RADIUS);
+    expect(palletApproach.x).toBeLessThanOrEqual(6.62 - PLAYER_COLLISION_RADIUS);
+    expect(isPositionBlocked(backWallApproach)).toBe(false);
+    expect(isPositionBlocked(palletApproach)).toBe(false);
+  });
+
   it("allows unobstructed movement through open factory paths", () => {
     const position = { x: 10, z: 10 };
 

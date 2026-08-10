@@ -1,3 +1,5 @@
+import { INDUSTRIAL_DETAIL_COLLIDERS } from "@/features/environment/industrial-layout";
+
 type HorizontalPosition = {
   x: number;
   z: number;
@@ -35,6 +37,7 @@ export const WORLD_COLLIDERS: readonly AxisAlignedCollider[] = [
   { id: "canopy-north-east-post", minX: 7.77, maxX: 7.93, minZ: -4.63, maxZ: -4.47 },
   { id: "canopy-south-west-post", minX: 3.87, maxX: 4.03, minZ: -1.73, maxZ: -1.57 },
   { id: "canopy-south-east-post", minX: 7.77, maxX: 7.93, minZ: -1.73, maxZ: -1.57 },
+  ...INDUSTRIAL_DETAIL_COLLIDERS,
   { id: "value-station-a", minX: -1.82, maxX: -0.78, minZ: -1.82, maxZ: -0.78 },
   { id: "value-station-b", minX: 0.78, maxX: 1.82, minZ: -1.82, maxZ: -0.78 },
   { id: "value-station-c", minX: -1.82, maxX: -0.78, minZ: -0.12, maxZ: 0.92 },

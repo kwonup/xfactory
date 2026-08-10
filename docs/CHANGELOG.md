@@ -2,6 +2,30 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 18A] — Factory environment visual polish
+
+### Added
+
+- 기존 World 경계 안에 concrete retaining wall과 low-poly perimeter fence를 추가했다.
+- 순환 도로 네 방향에 횡단보도와 밝은 edge line을 추가했다.
+- 중앙 작업 바닥에 Smart Factory 안전선, hazard stripe와 보행 구역 표시를 추가했다.
+- Smart Factory에 후면 작업동, loading door, roof skylight와 안전 bollard를 추가했다.
+- Conveyor 위 Product Box, AI Vision Camera, Monitoring Screen과 pallet 적재물을 추가했다.
+- 주요 pallet과 공장 후면 벽을 통과하지 않도록 collider를 추가했다.
+- 산업 디테일 수량, 기존 World 범위, 진입구, collider와 접근 동선을 검증하는 회귀 테스트를 추가했다.
+
+### Changed
+
+- 외곽 경계 언덕의 높이와 채도를 낮추고 산업용 경계 구조물이 더 잘 보이도록 조정했다.
+- Company Vision Lab과 AI / SDM Lab 건물에 facade mullion과 rooftop ventilation unit을 추가했다.
+- 잔디색을 조금 차분하게 조정해 밝은 야외 분위기는 유지하면서 concrete와 설비의 대비를 높였다.
+
+### Notes
+
+- World 크기와 Zone 위치, 주요 이동 동선은 변경하지 않았다.
+- 외부 model이나 texture 없이 기존 Three.js geometry와 project material만 사용했다.
+- 앱 내 브라우저가 연결되지 않아 이번 단계의 시각 검증은 자동화된 layout·collision test와 production build로 대체했다.
+
 ## [Commit 18] — IX Chat UI
 
 ### Added

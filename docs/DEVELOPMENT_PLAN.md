@@ -196,6 +196,13 @@ apps/api/app
 - idle, loading, success, error
 - 결정적인 mock 응답
 
+### Commit 18A — Factory environment visual polish · 완료
+
+- 산업용 concrete apron과 물류·안전 노면 표시
+- perimeter fence, retaining wall과 road crossing
+- 공장 외장, loading bay, pallet과 monitoring 설비
+- 기존 소규모 동선과 밝은 야외 색감 유지
+
 ### Commit 19 — Chat API contract
 
 - `POST /api/v1/chat`
