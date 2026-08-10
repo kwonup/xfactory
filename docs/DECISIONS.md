@@ -265,3 +265,16 @@ API와 RAG가 연결되기 전에 mock 응답으로 Mission을 완료하면 사�
 ### 이유
 
 World를 넓히거나 건물을 대량 추가하면 짧은 온보딩 동선과 한눈에 파악되는 구조가 약해진다. 기존 공간 안에서 산업 설비와 안전 시각 언어를 강화하면 밝고 친근한 분위기와 작은 규모를 유지하면서 공장 정체성을 더 분명하게 만들 수 있다.
+
+## ADR-021 — 건물과 조형물은 실제 공정 역할이 읽히는 설비로 표현한다
+
+- 상태: Accepted
+- 결정일: 2026-08-10
+
+### 결정
+
+Company Vision과 AI / SDM 건물은 주거형 또는 일반 연구동 인상을 줄이고, flat roof, metal cladding, loading bay, control panel, rooftop HVAC, pipe와 cooling 설비를 가진 공정 제어동·자동화 설비동으로 표현한다. Core Value와 IX 구역의 추상 조형물은 operator station, process manifold와 service dock으로 전환한다.
+
+### 이유
+
+색상과 간판만으로 Zone을 구분하면 야외 캠퍼스나 전시 공원처럼 보일 수 있다. 각 구조물에 제어, 냉각, 이송, 집진과 정비 역할이 보이는 설비를 부여하면 World를 넓히지 않고도 사용자가 한눈에 공장임을 인지할 수 있다. 기존 상호작용 좌표와 밝은 색감은 유지해 온보딩 동선과 친근한 인상도 보존한다.

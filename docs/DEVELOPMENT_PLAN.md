@@ -203,6 +203,15 @@ apps/api/app
 - 공장 외장, loading bay, pallet과 monitoring 설비
 - 기존 소규모 동선과 밝은 야외 색감 유지
 
+### Commit 18B — Industrial architecture and machinery · 완료
+
+- 연구동을 flat-roof 제어동·자동화 설비동 외형으로 전환
+- loading bay, metal cladding, rooftop HVAC와 배관 설비
+- Smart Factory pipe rack, extraction vessel과 roof rib 추가
+- Core Value 조형물을 operator station과 process manifold로 전환
+- IX 휴식용 조형물을 산업용 service dock으로 전환
+- 기존 Zone, Interaction과 compact World 좌표 유지
+
 ### Commit 19 — Chat API contract
 
 - `POST /api/v1/chat`

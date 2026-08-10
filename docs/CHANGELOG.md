@@ -2,6 +2,29 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 18B] — Industrial architecture and machinery
+
+### Added
+
+- Company Vision 건물을 metal cladding, loading bay, control panel, rooftop HVAC, pipe bank와 process vessel을 갖춘 공정 제어동으로 구성했다.
+- AI / SDM 건물을 loading bay, cooling fan bank, service pipe와 antenna를 갖춘 자동화 설비동으로 구성했다.
+- Smart Factory 지붕에 structural rib와 extraction vessel을 추가하고 후면에 3계통 overhead pipe rack을 배치했다.
+- Core Value의 장식형 조형물 4개를 screen, status beacon과 conduit를 가진 operator station으로 교체했다.
+- 중앙 조형물을 station conduit가 연결되는 process manifold로, IX 구역의 목재 bench를 service dock으로 교체했다.
+- 두 산업 건축의 외형·색상·설비 구성을 타입화한 layout data와 mission control 정렬 회귀 테스트를 추가했다.
+
+### Changed
+
+- Welcome Plaza의 안내판 구조를 steel gantry, brace와 signal light 형태의 공장 출입 구조물로 변경했다.
+- Core Value와 IX 바닥을 잔디형 장식 공간에서 concrete 작업 cell과 안전색 표식 중심으로 변경했다.
+- 기존 Building primitive를 flat-roof 산업 건축 공통 primitive로 확장했다.
+
+### Notes
+
+- World 크기, 6개 Zone, Mission과 Core Value 상호작용 좌표는 변경하지 않았다.
+- 외부 model, texture와 새 dependency 없이 Three.js 기본 geometry만 사용했다.
+- 앱 내 브라우저 대상이 제공되지 않아 시각 검증을 실행하지 못했으며, layout·interaction·collision test와 production build로 회귀 여부를 확인했다.
+
 ## [Commit 18A] — Factory environment visual polish
 
 ### Added

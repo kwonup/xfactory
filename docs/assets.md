@@ -12,7 +12,7 @@ X-FACTORY에 포함하는 외부 3D 모델, 텍스처, 폰트와 기타 시각 �
 
 ## Current Usage
 
-현재 밝은 야외 공장 기반 지형, 산업용 fence·노면 표시·loading 설비·물류 적재물, 자연물, Player, 여섯 Zone의 건물·설비·공원 오브젝트는 Three.js 기본 geometry와 프로젝트 내부 material만 사용한다. 외부 모델, 텍스처, 이미지 또는 폰트는 아직 사용하지 않았다.
+현재 밝은 야외 공장 기반 지형, 산업용 fence·노면 표시·loading 설비·물류 적재물, 제어동·자동화 설비동, pipe rack·process vessel·operator station·service dock, 자연물, Player와 IX는 Three.js 기본 geometry와 프로젝트 내부 material만 사용한다. 외부 모델, 텍스처, 이미지 또는 폰트는 아직 사용하지 않았다.
 
 따라서 현재 별도로 표시할 외부 에셋 라이선스는 없다.
 

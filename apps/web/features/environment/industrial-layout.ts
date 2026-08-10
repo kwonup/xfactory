@@ -1,5 +1,28 @@
 export type IndustrialPosition = [number, number, number];
 
+export type IndustrialBuildingId = "ai-automation-building" | "company-control-building";
+
+export type IndustrialEquipmentKind =
+  | "antenna"
+  | "control-panel"
+  | "cooling-fan-bank"
+  | "loading-bay"
+  | "pipe-bank"
+  | "process-vessel"
+  | "roof-air-handler"
+  | "roof-ventilator";
+
+export type IndustrialBuildingDefinition = {
+  accent: string;
+  baySide: -1 | 1;
+  equipment: readonly IndustrialEquipmentKind[];
+  id: IndustrialBuildingId;
+  position: IndustrialPosition;
+  roof: string;
+  size: IndustrialPosition;
+  wall: string;
+};
+
 export type PerimeterFenceSegment = {
   id: string;
   length: number;
@@ -24,6 +47,48 @@ export type PalletLoad = {
   position: IndustrialPosition;
   rotation: number;
 };
+
+export const INDUSTRIAL_BUILDINGS: readonly IndustrialBuildingDefinition[] = [
+  {
+    accent: "#64b9d7",
+    baySide: 1,
+    equipment: [
+      "loading-bay",
+      "control-panel",
+      "pipe-bank",
+      "process-vessel",
+      "roof-air-handler",
+      "roof-ventilator",
+    ],
+    id: "company-control-building",
+    position: [-6.1, 0.28, -3.15],
+    roof: "#3e7180",
+    size: [4.45, 2.45, 3.15],
+    wall: "#e8f1eb",
+  },
+  {
+    accent: "#8878c7",
+    baySide: -1,
+    equipment: [
+      "loading-bay",
+      "control-panel",
+      "cooling-fan-bank",
+      "pipe-bank",
+      "antenna",
+      "roof-air-handler",
+      "roof-ventilator",
+    ],
+    id: "ai-automation-building",
+    position: [-6.05, 0.28, 2.5],
+    roof: "#665a99",
+    size: [4.35, 2.35, 3.2],
+    wall: "#e9e5f0",
+  },
+];
+
+export const INDUSTRIAL_BUILDING_BY_ID = Object.fromEntries(
+  INDUSTRIAL_BUILDINGS.map((building) => [building.id, building]),
+) as Record<IndustrialBuildingId, IndustrialBuildingDefinition>;
 
 export const PERIMETER_FENCE_SEGMENTS: readonly PerimeterFenceSegment[] = [
   { id: "fence-north-west", length: 14, position: [-8.2, 0, -14.35], rotation: 0 },

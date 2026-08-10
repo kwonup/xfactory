@@ -61,9 +61,10 @@
 | 3D-08 | Company Vision Lab | 작은 연구동과 Vision Display 배치 | 09 | DONE | Code geometry lab, browser check |
 | 3D-09 | Smart Factory | Robot, Conveyor, Vision 설비 배치 | 09 | DONE | Open canopy, robot arm, conveyor |
 | 3D-10 | AI / SDM Lab | Data-AI-Factory 흐름 시각화 | 09 | DONE | Stylized lab and signal object |
-| 3D-11 | Core Value Park | 4개 Station 배치 공간 구성 | 09 | DONE | Four colored station markers |
-| 3D-12 | IX Area | IX를 위한 친근한 휴식 공간 구성 | 09 | DONE | Garden ring, bench, IX pedestal |
+| 3D-11 | Core Value Park | 4개 Station 배치 공간 구성 | 09/18B | DONE | Four industrial operator stations and process manifold |
+| 3D-12 | IX Area | IX를 위한 친근한 휴식 공간 구성 | 09/18B | DONE | Compact service cell, dock and IX pedestal |
 | 3D-13 | 산업형 공장 환경 | 물류·안전 노면과 공장 외장·설비 디테일 강화 | 18A | DONE | Layout coverage, open entrance, collider and interaction regression tests |
+| 3D-14 | 공장형 건축과 기계설비 | 일반 건축·장식 조형물을 산업용 제어동과 설비로 전환 | 18B | DONE | Industrial profile, mission control alignment, collision and quality gate tests |
 
 ## 5. Player, Movement, Camera, Collision
 

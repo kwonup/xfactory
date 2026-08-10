@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  INDUSTRIAL_BUILDINGS,
+  INDUSTRIAL_BUILDING_BY_ID,
   INDUSTRIAL_DETAIL_COLLIDERS,
   PALLET_LOADS,
   PERIMETER_FENCE_SEGMENTS,
@@ -8,7 +10,53 @@ import {
   ROAD_CROSSWALKS,
   SAFETY_BOLLARD_POSITIONS,
 } from "@/features/environment/industrial-layout";
+import { INTERACTION_TARGET_BY_ID } from "@/features/interaction/interaction-targets";
+
 describe("industrial outdoor factory layout", () => {
+  it("defines factory buildings with distinct industrial equipment profiles", () => {
+    expect(INDUSTRIAL_BUILDINGS).toHaveLength(2);
+
+    const companyBuilding = INDUSTRIAL_BUILDING_BY_ID["company-control-building"];
+    const automationBuilding = INDUSTRIAL_BUILDING_BY_ID["ai-automation-building"];
+
+    expect(companyBuilding.equipment).toEqual(
+      expect.arrayContaining(["loading-bay", "control-panel", "pipe-bank", "process-vessel"]),
+    );
+    expect(automationBuilding.equipment).toEqual(
+      expect.arrayContaining(["loading-bay", "control-panel", "cooling-fan-bank", "antenna"]),
+    );
+
+    for (const building of INDUSTRIAL_BUILDINGS) {
+      expect(building.equipment).toContain("roof-air-handler");
+      expect(building.equipment).toContain("roof-ventilator");
+      expect(building.size[0]).toBeGreaterThan(building.size[1]);
+      expect(building.size[2]).toBeGreaterThan(building.size[1]);
+    }
+  });
+
+  it("keeps mission controls aligned with the industrial building fronts", () => {
+    const controls = [
+      {
+        building: INDUSTRIAL_BUILDING_BY_ID["company-control-building"],
+        target: INTERACTION_TARGET_BY_ID["company-vision-display"],
+      },
+      {
+        building: INDUSTRIAL_BUILDING_BY_ID["ai-automation-building"],
+        target: INTERACTION_TARGET_BY_ID["ai-sdm-monitor"],
+      },
+    ];
+
+    for (const { building, target } of controls) {
+      const frontZ = building.position[2] + building.size[2] / 2;
+      const minX = building.position[0] - building.size[0] / 2;
+      const maxX = building.position[0] + building.size[0] / 2;
+
+      expect(Math.abs(target.position[2] - frontZ)).toBeLessThan(0.2);
+      expect(target.position[0]).toBeGreaterThan(minX);
+      expect(target.position[0]).toBeLessThan(maxX);
+    }
+  });
+
   it("defines compact perimeter, road-safety and logistics details", () => {
     expect(PERIMETER_FENCE_SEGMENTS).toHaveLength(6);
     expect(RETAINING_WALL_SEGMENTS).toHaveLength(3);
