@@ -189,7 +189,7 @@ apps/api/app
 - Stylized IX 또는 geometry fallback
 - Idle, nameplate, 대화 proximity
 
-### Commit 18 — IX Chat UI
+### Commit 18 — IX Chat UI · 완료
 
 - DOM Chat Panel
 - 질문 입력과 추천 질문

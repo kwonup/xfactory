@@ -1293,6 +1293,280 @@ a {
   margin-top: 1.35rem;
 }
 
+.ix-chat-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 18;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgba(29, 48, 42, 0.38);
+  backdrop-filter: blur(10px);
+}
+
+.ix-chat-panel {
+  width: min(44rem, 100%);
+  max-height: min(48rem, calc(100svh - 2.5rem));
+  overflow-y: auto;
+  border: 1px solid rgba(55, 91, 79, 0.18);
+  border-radius: 1.35rem;
+  background: rgba(249, 253, 248, 0.98);
+  padding: clamp(1.15rem, 3vw, 1.8rem);
+  box-shadow: 0 1.8rem 5rem rgba(24, 46, 38, 0.3);
+  color: #29463f;
+}
+
+.ix-chat-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.ix-chat-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.ix-chat-avatar {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 0.82rem;
+  background: #3f8058;
+  box-shadow: inset 0 0 0 1px rgba(216, 255, 111, 0.3);
+  color: #efffc1;
+  font-family: "Courier New", monospace;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.ix-chat-identity > div > span,
+.ix-chat-suggestions > span,
+.ix-chat-form > label,
+.ix-chat-form > small {
+  color: #698078;
+  font-family: "Courier New", monospace;
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.ix-chat-identity h2 {
+  margin: 0.24rem 0 0;
+  color: #213b35;
+  font-size: clamp(1.15rem, 3vw, 1.65rem);
+  letter-spacing: -0.035em;
+}
+
+.ix-chat-close {
+  display: grid;
+  width: 2.4rem;
+  height: 2.4rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(45, 77, 69, 0.16);
+  border-radius: 50%;
+  background: #edf5ed;
+  color: #345d51;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.ix-chat-description {
+  margin: 1rem 0 0;
+  border-radius: 0.72rem;
+  background: #fff4d6;
+  padding: 0.7rem 0.8rem;
+  color: #765f2b;
+  font-size: 0.64rem;
+  line-height: 1.55;
+}
+
+.ix-chat-log {
+  display: flex;
+  min-height: 12rem;
+  max-height: 19rem;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  overflow-y: auto;
+  border: 1px solid rgba(45, 77, 69, 0.1);
+  border-radius: 1rem;
+  background: #edf4eb;
+  padding: 1rem;
+  overscroll-behavior: contain;
+}
+
+.ix-chat-message {
+  width: fit-content;
+  max-width: 88%;
+  border-radius: 0.9rem 0.9rem 0.9rem 0.25rem;
+  background: #fff;
+  padding: 0.75rem 0.85rem;
+  box-shadow: 0 0.35rem 1rem rgba(44, 76, 66, 0.07);
+}
+
+.ix-chat-message[data-speaker="user"] {
+  align-self: flex-end;
+  border-radius: 0.9rem 0.9rem 0.25rem 0.9rem;
+  background: #3f8058;
+  color: #fff;
+}
+
+.ix-chat-message > span {
+  display: block;
+  color: #4e7d69;
+  font-family: "Courier New", monospace;
+  font-size: 0.45rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.ix-chat-message[data-speaker="user"] > span {
+  color: #cfe8d0;
+}
+
+.ix-chat-message > p {
+  margin: 0.38rem 0 0;
+  color: #46645c;
+  font-size: 0.72rem;
+  line-height: 1.65;
+  word-break: keep-all;
+}
+
+.ix-chat-message[data-speaker="user"] > p {
+  color: #fff;
+}
+
+.ix-chat-loading-text > span {
+  display: inline-block;
+  margin-left: 0.3rem;
+  color: #4f9f74;
+  letter-spacing: 0.12em;
+  animation: ix-chat-thinking 1.2s ease-in-out infinite;
+}
+
+.ix-chat-error {
+  border: 1px solid rgba(177, 89, 66, 0.2);
+  background: #fff2ed;
+}
+
+.ix-chat-error > span,
+.ix-chat-error > p {
+  color: #965b4d;
+}
+
+.ix-chat-error > button {
+  margin-top: 0.65rem;
+  border: 1px solid rgba(150, 91, 77, 0.25);
+  border-radius: 999px;
+  background: #fff;
+  padding: 0.45rem 0.7rem;
+  color: #875043;
+  font-size: 0.56rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ix-chat-suggestions {
+  margin-top: 1rem;
+}
+
+.ix-chat-suggestions > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.5rem;
+}
+
+.ix-chat-suggestions button {
+  border: 1px solid rgba(55, 91, 79, 0.16);
+  border-radius: 999px;
+  background: #fff;
+  padding: 0.55rem 0.72rem;
+  color: #48675e;
+  font-size: 0.58rem;
+  cursor: pointer;
+}
+
+.ix-chat-suggestions button:hover,
+.ix-chat-suggestions button:focus-visible {
+  border-color: rgba(63, 128, 88, 0.48);
+  background: #edf7ed;
+  color: #315f49;
+}
+
+.ix-chat-suggestions button:disabled {
+  cursor: wait;
+  opacity: 0.5;
+}
+
+.ix-chat-form {
+  margin-top: 1rem;
+  border-top: 1px solid rgba(45, 77, 69, 0.11);
+  padding-top: 1rem;
+}
+
+.ix-chat-form > label {
+  display: block;
+}
+
+.ix-chat-form > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.55rem;
+  margin-top: 0.48rem;
+}
+
+.ix-chat-form input {
+  min-width: 0;
+  border: 1px solid rgba(55, 91, 79, 0.2);
+  border-radius: 0.78rem;
+  background: #fff;
+  padding: 0.78rem 0.85rem;
+  color: #29463f;
+  font-size: 0.72rem;
+}
+
+.ix-chat-form input::placeholder {
+  color: #8a9b95;
+}
+
+.ix-chat-form > div > button {
+  min-width: 5.2rem;
+  border: 0;
+  border-radius: 0.78rem;
+  background: #3f8058;
+  padding: 0.75rem 0.9rem;
+  color: #fff;
+  font-size: 0.66rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ix-chat-form > div > button:disabled {
+  background: #9bad9f;
+  cursor: not-allowed;
+}
+
+.ix-chat-form > small {
+  display: block;
+  margin-top: 0.55rem;
+  font-size: 0.43rem;
+  line-height: 1.5;
+}
+
+.ix-chat-panel button:focus-visible,
+.ix-chat-panel input:focus-visible {
+  outline: 3px solid rgba(77, 147, 103, 0.34);
+  outline-offset: 3px;
+}
+
 .value-passport {
   position: absolute;
   top: 20.7rem;
@@ -1669,6 +1943,18 @@ a {
   }
 }
 
+@keyframes ix-chat-thinking {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-0.12rem);
+  }
+}
+
 @keyframes status-pulse {
   0%,
   100% {
@@ -1851,6 +2137,41 @@ a {
   }
 
   .core-value-quest-footer button {
+    width: 100%;
+  }
+
+  .ix-chat-backdrop {
+    padding: 0.75rem;
+  }
+
+  .ix-chat-panel {
+    max-height: calc(100svh - 1.5rem);
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .ix-chat-log {
+    min-height: 10rem;
+  }
+
+  .ix-chat-message {
+    max-width: 94%;
+  }
+
+  .ix-chat-suggestions > div {
+    display: grid;
+  }
+
+  .ix-chat-suggestions button {
+    width: 100%;
+    text-align: left;
+  }
+
+  .ix-chat-form > div {
+    grid-template-columns: 1fr;
+  }
+
+  .ix-chat-form > div > button {
     width: 100%;
   }
 

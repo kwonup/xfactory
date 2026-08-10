@@ -239,3 +239,16 @@ IX NPC는 외부 model dependency 없이 코드 기반 geometry와 안전한 Idl
 ### 이유
 
 NPC 표현과 대화 기능을 분리하면 model 또는 animation 누락 여부와 무관하게 접근 가능한 진입점을 먼저 검증할 수 있다. 또한 IX에게 접근한 행위와 성공한 Chat 응답을 구분해 Mission 04가 조기에 완료되는 것을 방지한다.
+
+## ADR-019 — IX Chat mock은 실제 Mission 응답으로 취급하지 않는다
+
+- 상태: Accepted
+- 결정일: 2026-08-10
+
+### 결정
+
+Commit 18의 Chat은 입력과 상태 전환을 검증하기 위한 결정적 mock responder를 사용한다. 응답에는 `[DEMO DATA] · MOCK RESPONSE`를 명시하고 X-FACTORY 제품 내 탐색 안내만 제공한다. mock 성공 시 `ix-chat-response-received` Mission event를 전달하지 않는다.
+
+### 이유
+
+API와 RAG가 연결되기 전에 mock 응답으로 Mission을 완료하면 사용자가 근거 기반 온보딩 답변을 받았다는 잘못된 상태가 만들어진다. UI 검증과 실제 완료 조건을 분리하면 후속 API 통합 이후 검증된 성공 응답에서만 Mission 04를 완료할 수 있다.

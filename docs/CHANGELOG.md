@@ -2,6 +2,28 @@
 
 각 단계에서 실제 변경된 내용을 기록한다. 미래 계획은 [`DEVELOPMENT_PLAN.md`](./DEVELOPMENT_PLAN.md)에서 관리한다.
 
+## [Commit 18] — IX Chat UI
+
+### Added
+
+- IX interaction이 활성화되면 Canvas 위에 표시되는 접근 가능한 DOM Chat Panel을 추가했다.
+- 직접 질문을 입력해 전송하는 form과 3개의 추천 질문 버튼을 추가했다.
+- `idle`, `loading`, `success`, `error`를 명시적으로 구분하는 Chat view state를 추가했다.
+- X-FACTORY 탐색 안내 범위에서 동일 질문에 항상 같은 답을 반환하는 결정적 mock responder를 추가했다.
+- loading `aria-busy`, error alert와 재시도, 요청 취소, 입력·버튼 상태를 검증하는 회귀 테스트를 추가했다.
+
+### Changed
+
+- Onboarding 화면에 IX Chat Panel을 연결하고 활성 Chat 중 Player 이동을 기존 Interaction 상태로 정지했다.
+- Chat input에 포커스가 있어도 공통 `ESC` 동작으로 Panel을 닫을 수 있도록 기존 keyboard 흐름을 재사용했다.
+- 공통 Modal과 Chat의 `ESC` 닫기 항목을 완료 상태로 갱신했다.
+
+### Notes
+
+- 모든 응답은 `[DEMO DATA] · MOCK RESPONSE`로 표시되며 확인된 자료에 없는 INTERX 내부 사실을 생성하지 않는다.
+- mock 응답은 실제 API 또는 RAG 응답이 아니므로 Mission 04 `Meet IX`를 완료하지 않는다. 실제 성공 응답 연결과 완료 처리는 Commit 25의 범위다.
+- request/response API schema, World Context와 Sources는 Commit 19 이후에 구현한다.
+
 ## [Commit 17] — IX NPC
 
 ### Added

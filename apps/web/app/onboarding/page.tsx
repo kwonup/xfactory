@@ -4,6 +4,7 @@ import { CoreValueQuestModal } from "@/components/onboarding/core-value-quest-mo
 import { CurrentZoneIndicator } from "@/components/onboarding/current-zone-indicator";
 import { InformationModal } from "@/components/onboarding/information-modal";
 import { InteractionPrompt } from "@/components/onboarding/interaction-prompt";
+import { IxChatPanel } from "@/components/onboarding/ix-chat-panel";
 import { MissionHud } from "@/components/onboarding/mission-hud";
 import { ValuePassport } from "@/components/onboarding/value-passport";
 import { OnboardingExperience } from "@/components/three/onboarding-experience";
@@ -39,6 +40,7 @@ export default function OnboardingPage() {
       <InteractionPrompt />
       <InformationModal />
       <CoreValueQuestModal />
+      <IxChatPanel />
 
       <aside className="scene-telemetry" aria-label="조작 안내">
         <dl>

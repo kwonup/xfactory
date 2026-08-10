@@ -88,7 +88,7 @@
 | ZI-04 | 근접 판정 | radius 안에서만 활성화 | 11 | DONE | Inclusive range and reachable-point tests |
 | ZI-05 | 최근접 대상 | 겹칠 때 가장 가까운 하나 선택 | 11 | DONE | Overlapping target nearest-selection test |
 | ZI-06 | `E` Prompt | 대상별 DOM 안내 표시 | 11 | DONE | Prompt render and keyboard action tests |
-| ZI-07 | `ESC` 닫기 | Modal과 Chat을 키보드로 닫음 | 11/12/18 | IN PROGRESS | Info Modal uses shared ESC close; Chat integration pending |
+| ZI-07 | `ESC` 닫기 | Modal과 Chat을 키보드로 닫음 | 11/12/18 | DONE | Shared keyboard close handles Info, Quest and focused Chat input |
 | ZI-08 | 정보 Modal | Vision, Factory, AI/SDM 콘텐츠 표시 | 12 | DONE | Accessible dialog render, content coverage and event tests |
 
 ## 7. Mission System
@@ -120,9 +120,9 @@
 |---|---|---|---:|---|---|
 | IX-01 | IX NPC | NPC, Idle fallback, nameplate 표시 | 17 | DONE | Geometry NPC build, animation fallback and nameplate render tests |
 | IX-02 | 근접 대화 진입 | 범위 안에서 `E`로 Chat 열기 | 17 | DONE | Reachable NPC target, shared `E` activation and `ESC` close tests |
-| IX-03 | DOM Chat Panel | Canvas 위 일반 React UI 사용 | 18 | TODO | — |
-| IX-04 | 입력과 추천 질문 | 질문 입력·전송·예시 선택 | 18 | TODO | — |
-| IX-05 | Chat 상태 | idle/loading/success/error 구분 | 18 | TODO | — |
+| IX-03 | DOM Chat Panel | Canvas 위 일반 React UI 사용 | 18 | DONE | Accessible dialog render and active IX overlay integration |
+| IX-04 | 입력과 추천 질문 | 질문 입력·전송·예시 선택 | 18 | DONE | Input form, three unique suggestion and deterministic response tests |
+| IX-05 | Chat 상태 | idle/loading/success/error 구분 | 18 | DONE | Four-state render, aria-busy, retry and cancellation tests |
 
 ## 10. API and LangChain RAG
 
